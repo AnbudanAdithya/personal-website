@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S Adithya | Portfolio</title>
+    
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/favicon.svg" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="resume.html"><i class="far fa-file-alt"></i> Resume</a></li>
+                <li><a href="blogs.html"><i class="fas fa-blog"></i> Blogs</a></li>
+                <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="hobby.html"><i class="fas fa-th-large"></i> Hobby</a></li>
+                <li>
+                    <a href="https://github.com/AnbudanAdithya/Website" target="_blank" class="btn-fork">
+                        <i class="fas fa-code-branch"></i> <i class="fas fa-star"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-section">
+        <h2 class="section-title">My Recent <span class="highlight">Works</span></h2>
+        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;">Here are a few projects I've worked on recently.</p>
+        
+        <div class="cards-grid">
+            <div class="card-item">
+                <img src="images/Projects/EMI_Model.jpg" alt="EMI" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">EMI Calculator</h3>
+                    <p class="card-text">A simple yet powerful, user friendly excel model that lets user calculate the loan EMI to be paid.</p>
+                    <a href="assets/Project/Excel_Files/EMI_Calculator.xlsm" target="_blank" class="btn-card"><i class="fas fa-globe"></i> File Link</a>
+                </div>
+            </div>
+            
+            <div class="card-item">
+                <img src="images/Projects/Tax_Calculator.jpg" alt="Tax" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Tax Calculator</h3>
+                    <p class="card-text">Based on new budget as announced by Hon'ble Finance Minister, I tried to create a model to identify the tax payable.</p>
+                    <a href="assets/Project/Excel_Files/Tax_Calculator.xlsm" target="_blank" class="btn-card"><i class="fas fa-globe"></i> File Link</a>
+                </div>
+            </div>
+
+            <div class="card-item">
+                <img src="images/Projects/Book_Review.png" alt="Book Review" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Book Review - Psychology of Money</h3>
+                    <p class="card-text">Take a look at my book review I have shared my thoughts on the book 'Psychology of Money' by Morgan Housel.</p>
+                    <a href="assets/Project/PDF/Book_Review.pdf" target="_blank" class="btn-card"><i class="fas fa-globe"></i> File Link</a>
+                </div>
+            </div>
+
+            <div class="card-item">
+                <img src="images/Projects/FinTech_Report.jpg" alt="Fintech" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">FinTech Banks - Brief Study Report</h3>
+                    <p class="card-text">A brief study report on the FinTech Banks in India, covering their impact, growth, and future prospects.</p>
+                    <a href="assets/Project/PDF/FinTech_Banks.pdf" target="_blank" class="btn-card"><i class="fas fa-globe"></i> File Link</a>
+                </div>
+            </div>
+
+             <div class="card-item">
+                <img src="images/Projects/BA.png" alt="BA" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Bike Sales - Predictive Analytics</h3>
+                    <p class="card-text">A model and a dashboard predicting sales of bike in India based on different criteria with a comprehensive report; Dataset adopted from Kaggle.</p>
+                    <a href="https://drive.google.com/drive/folders/1TrKx-nA0NzJck2LAvIH-b78XGXDh8dyt?usp=drive_link" target="_blank" class="btn-card"><i class="fas fa-globe"></i> File Link</a>
+                </div>
+            </div>
+
+            <div class="card-item">
+                <img src="images/Projects/CVP_Analysis.png" alt="CVP" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Cost Volume Profit Analysis</h3>
+                    <p class="card-text">A model and a dashboard that analyzes the relationship between cost, volume, and profit using simple Excel Model.</p>
+                    <a href="assets/Project/Excel_Files/CVP.xlsm" target="_blank" class="btn-card"><i class="fas fa-globe"></i> File Link</a>
+                </div>
+            </div>
+            
+            <div class="card-item">
+                <img src="images/Projects/Guardian_X.png" alt="Guardian" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Smart Helmet - Market Research Report</h3>
+                    <p class="card-text">A comprehensive market research report on 'Guardian X', a smart helmet with advanced safety features.</p>
+                    <a href="assets/Project/PDF/Guardian_X.pdf" target="_blank" class="btn-card"><i class="fas fa-globe"></i> File Link</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright © <span id="year"></span> SA | Built with 💛 by Adithya</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

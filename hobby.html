@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S Adithya | Portfolio</title>
+    
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/favicon.svg" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="resume.html"><i class="far fa-file-alt"></i> Resume</a></li>
+                <li><a href="blogs.html"><i class="fas fa-blog"></i> Blogs</a></li>
+                <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="hobby.html"><i class="fas fa-th-large"></i> Hobby</a></li>
+                <li>
+                    <a href="https://github.com/AnbudanAdithya/Website" target="_blank" class="btn-fork">
+                        <i class="fas fa-code-branch"></i> <i class="fas fa-star"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-section">
+        <h2 class="section-title">My <span class="highlight">Hobbies</span></h2>
+        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;">Here are a few things I love doing in my creative downtime.</p>
+        
+        <div class="cards-grid">
+            <div class="card-item">
+                <img src="images/Hobby/Music_Image.jpg" alt="Music" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Music Composition - 1</h3>
+                    <p class="card-text">Hear my first ever music composition created using DJ Loop Pads.</p>
+                    <audio controls><source src="assets/Hobby/Music_1.mp3" type="audio/mpeg">Your browser does not support audio.</audio>
+                </div>
+            </div>
+            <div class="card-item">
+                <img src="images/Hobby/Music_Image.jpg" alt="Music" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Music Composition - 4</h3>
+                    <p class="card-text">I created this using BandLab loop pads feature - I hope this gives a hero BGM vibe</p>
+                    <audio controls><source src="assets/Hobby/Music_4.mp3" type="audio/mpeg">Your browser does not support audio.</audio>
+                </div>
+            </div>
+            
+            <div class="card-item">
+                <img src="images/Hobby/Music_Image.jpg" alt="Music" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">Music Composition - 5</h3>
+                    <p class="card-text">I created this music composition created using BandLabs - You might find this familiar.</p>
+                    <audio controls><source src="assets/Hobby/Music_5.mp3" type="audio/mpeg">Your browser does not support audio.</audio>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>Copyright © <span id="year"></span> SA | Built with 💛 by Adithya</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

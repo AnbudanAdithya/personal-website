@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16161f" />
+      <stop offset="100%" stop-color="#0a0a0f" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e0b030" />
+      <stop offset="100%" stop-color="#f0c040" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-light" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .float-1 { animation: float1 4s ease-in-out infinite; }
+      .float-2 { animation: float2 5s ease-in-out infinite; }
+      .float-3 { animation: float3 4.5s ease-in-out infinite; }
+      .pulse-ring { animation: pulseRing 3s ease-out infinite; }
+      .data-link { stroke-dasharray: 8 8; animation: dash 15s linear infinite; }
+      
+      @keyframes float1 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+      @keyframes float2 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-6px); } }
+      @keyframes float3 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+      @keyframes dash { to { stroke-dashoffset: -200; } }
+      @keyframes pulseRing { 
+        0% { r: 50px; opacity: 0.8; stroke-width: 2; } 
+        100% { r: 85px; opacity: 0; stroke-width: 8; } 
+      }
+    </style>
+  </defs>
+
+  <circle cx="200" cy="200" r="190" fill="url(#bgGrad)" stroke="#2a2a3a" stroke-width="4"/>
+  
+  <circle cx="200" cy="200" r="140" fill="none" stroke="#2a2a3a" stroke-width="1.5" stroke-dasharray="10 15"/>
+
+  <g stroke="#f0c040" stroke-width="1.5" opacity="0.4" class="data-link">
+    <line x1="200" y1="200" x2="90" y2="110" />
+    <line x1="200" y1="200" x2="310" y2="110" />
+    <line x1="200" y1="200" x2="100" y2="290" />
+    <line x1="200" y1="200" x2="300" y2="290" />
+  </g>
+
+  <g class="float-1">
+    <circle cx="200" cy="200" r="50" fill="none" stroke="#f0c040" class="pulse-ring"/>
+    
+    <circle cx="200" cy="200" r="50" fill="#0a0a0f" stroke="url(#goldGrad)" stroke-width="3" filter="url(#glow-light)"/>
+    
+    <text x="200" y="222" font-family="'Inter', sans-serif" font-size="65" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-2">A</text>
+    
+    <path d="M 175 221 L 225 221" stroke="url(#goldGrad)" stroke-width="6" stroke-linecap="round" filter="url(#glow-light)"/>
+  </g>
+
+  <g transform="translate(90, 110)">
+    <g class="float-2">
+      <circle cx="0" cy="0" r="34" fill="#16161f" stroke="#a0a0b0" stroke-width="2"/>
+      <path d="M -16 -10 L -23 0 L -16 10 M 16 -10 L 23 0 L 16 10" fill="none" stroke="#a0a0b0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="0" y="5" font-family="'Inter', monospace" font-size="16" font-weight="700" fill="#f0c040" text-anchor="middle">Py</text>
+    </g>
+  </g>
+
+  <g transform="translate(310, 110)">
+    <g class="float-3">
+      <circle cx="0" cy="0" r="34" fill="#16161f" stroke="#a0a0b0" stroke-width="2"/>
+      <path d="M 0 10 V -10 C -5 -15, -15 -15, -18 -10 V 10 C -15 5, -5 5, 0 10 Z" fill="none" stroke="#f0c040" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M 0 10 V -10 C 5 -15, 15 -15, 18 -10 V 10 C 15 5, 5 5, 0 10 Z" fill="none" stroke="#f0c040" stroke-width="2" stroke-linejoin="round"/>
+      <line x1="-13" y1="-3" x2="-5" y2="-3" stroke="#a0a0b0" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="-13" y1="2" x2="-5" y2="2" stroke="#a0a0b0" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="5" y1="-3" x2="13" y2="-3" stroke="#a0a0b0" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="5" y1="2" x2="13" y2="2" stroke="#a0a0b0" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <g transform="translate(100, 290)">
+    <g class="float-3">
+      <circle cx="0" cy="0" r="34" fill="#16161f" stroke="#a0a0b0" stroke-width="2"/>
+      <path d="M -7 7 A 5 4 0 1 1 -12 11 L -12 -9 L 10 -13 L 10 3 A 5 4 0 1 1 5 7 L 5 -9 L -7 -6 Z" fill="#f0c040"/>
+    </g>
+  </g>
+
+  <g transform="translate(300, 290)">
+    <g class="float-2">
+      <circle cx="0" cy="0" r="34" fill="#16161f" stroke="#a0a0b0" stroke-width="2"/>
+      <polygon points="-11,-13 1,-13 11,-3 11,15 -11,15" fill="none" stroke="#a0a0b0" stroke-width="2" stroke-linejoin="round"/>
+      <polygon points="1,-13 1,-3 11,-3" fill="#a0a0b0" stroke="#a0a0b0" stroke-width="1" stroke-linejoin="round"/>
+      <circle cx="2" cy="2" r="6" fill="#16161f" stroke="#f0c040" stroke-width="2.5"/>
+      <line x1="6" y1="6" x2="14" y2="14" stroke="#f0c040" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+</svg>
