@@ -63,3 +63,34 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(type, 1000);
     }
 });
+
+// ── MODAL / POP-UP LOGIC ──────────────────────────────────────
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden"; // Prevents background webpage scrolling
+    }
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto"; // Restores webpage scrolling
+        
+        // Find all audio tags in this modal and stop them
+        const audios = modal.querySelectorAll('audio');
+        audios.forEach(audio => {
+            audio.pause();
+            audio.currentTime = 0; // Rewinds to the beginning
+        });
+    }
+}
+
+// Close modal if the user clicks anywhere outside of the modal content box
+window.addEventListener('click', function(event) {
+    if (event.target.classList.contains('modal')) {
+        closeModal(event.target.id);
+    }
+});

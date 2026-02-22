@@ -378,3 +378,79 @@ audio::-webkit-media-controls-time-remaining-display { color: var(--accent); }
     box-shadow: 0 5px 15px rgba(240, 192, 64, 0.2);
     z-index: 10;
 }
+
+/* ── MODAL / POP-UP STYLES ──────────────────────────────── */
+.hobby-category { cursor: pointer; }
+.hobby-category:hover .btn-card { background: var(--accent); color: var(--bg-primary); }
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 2000; /* Sits on top of everything, including the navbar */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 15, 0.85); /* Dark transparent overlay */
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--bg-card);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    width: 90%;
+    max-width: 600px;
+    max-height: 85vh;
+    overflow-y: auto; /* Allows scrolling inside the popup if there are many songs */
+    position: relative;
+    animation: modalFadeIn 0.15s ease-out;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-btn {
+    color: var(--text-secondary);
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: var(--accent);
+}
+
+/* Internal Layout for Songs */
+.modal-audio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.audio-item {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.2rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--border);
+    transition: var(--transition);
+}
+
+.audio-item:hover {
+    border-left-color: var(--accent);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.audio-item h4 { color: var(--text-primary); margin-bottom: 0.3rem; }
+.audio-item p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem; }
