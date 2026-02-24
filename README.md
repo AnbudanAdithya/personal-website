@@ -2,7 +2,7 @@
 
 Welcome to the repository for my personal portfolio website! This site serves as a central hub for my professional experience, academic background in Finance and Analytics, market research studies, blogs, and creative hobbies. 
 
-You can view the live website here: [Insert Live Link Here]
+You can view the live website here: [[Website](https://adithya05.vercel.app/)]
 
 ## 🌟 Features
 
