@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S Adithya | Website</title>
+    <title>S Adithya | Home</title>
+    <meta name="description" content="Portfolio of S Adithya, MBA candidate and aspiring finance professional specializing in finance and analytics.">
 
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">   
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta property="og:title" content="S Adithya | Home">
+    <meta property="og:description" content="MBA candidate passionate about finance, analytics, and music.">
+    <meta property="og:image" content="https://adithya05.vercel.app/images/avatar.svg">
+    <meta property="og:url" content="https://adithya05.vercel.app">
+    <meta property="og:type" content="website">   
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
@@ -17,23 +26,27 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <img src="images\favicon.svg" alt="Logo">
+                <img src="images/favicon.svg" alt="Logo">
             </a>
             <ul class="nav-links">
                 <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="HTML\resume.html"><i class="far fa-file-alt"></i> Resume</a></li>
+                <li><a href="HTML/resume.html"><i class="far fa-file-alt"></i> Resume</a></li>
                 <li><a href="HTML/projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
                 <li><a href="HTML/blogs.html"><i class="fas fa-blog"></i> Blogs</a></li>
                 <li><a href="HTML/hobby.html"><i class="fas fa-th-large"></i> Hobby</a></li>
                 <li>
-                    <a href="https://github.com/AnbudanAdithya/personal-website" target="_blank" class="btn-fork">
+                    <a href="https://github.com/AnbudanAdithya/personal-website" target="_blank" rel="noopener noreferrer" class="btn-fork">
                         <i class="fas fa-code-branch"></i> <i class="fas fa-star"></i>
                     </a>
                 </li>
             </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
+    <div class="hero-wrapper">
     <section class="hero">
         <div class="hero-content">
             <p class="hero-tag">MBA Student & Finance Enthusiast</p>
@@ -47,20 +60,27 @@
             <img src="images/Home-main.svg" alt="Home Graphic">
         </div>
     </section>
+    </div>
 
     <section class="about-intro">
         <div class="intro-container">
             <div class="intro-text">
                 <h2>LET ME <span class="highlight">INTRODUCE</span> MYSELF</h2>
-                <p>An aspiring finance professional and MBA candidate with a strong foundation in Accounting passionate about <b class="highlight">financial research, modelling & analytics</b>.</p>
-                <p>With an ability to lead teams and deliver results through analytical problem-solving, I am eager to apply my skills in a dynamic finance role to drive meaningful results.</p>
-                <p>My fields of interest include learning <b class="highlight">Financial Markets and Corporate Financial Strategy</b>, and exploring areas related to <b class="highlight">Python and SQL</b>.</p>
-                <p style = "margin-top:2rem">Some hobbies that I love to do are</p>
+                <p>I am an MBA student at <b class="highlight"> Sri Sathya Sai Institute of Higher Learning,</b> specializing in Finance & Analytics.
+                My academic path has been deliberately built around the intersection of rigorous financial analysis, quantitiative modelling and technology driven finance solutions.</p>
+                <p>I completed my <b class="highlight"> B.Com (Hons.) in Accounting and Finance</b> at SSSIHL (CGPA: 7.8).
+                I have a proven ability to lead teams and deliver results through analytical problem thinking. I am eager to apply my skills in a dynamic growth focused role.</p>
+
+                <div class="quote-box">
+                        <p>"I don't just study finance — I try to understand why companies succeed or fail, what the numbers are really saying, and how technology is reshaping financial services."</p>
+                </div>
+
+                <p style = "margin-top:1rem">Some hobbies that I love to do are</p>
                 <ul class="intro-list">
                     <li><i class="far fa-hand-point-right"></i> Listening & Creating Music</li>
                     <li><i class="far fa-hand-point-right"></i> Singing</li>
-                    <li><i class="far fa-hand-point-right"></i> Learning Guitar</li>
-                    <li><i class="far fa-hand-point-right"></i> Reading Novels</li>
+                    <li><i class="far fa-hand-point-right"></i> Learning New Stuff Everyday</li>
+                    <li><i class="far fa-hand-point-right"></i> Reading Novels (Fan of Dan Brown and David Balducci) </li>
                 </ul>
 
                     <div class="quote-box">
@@ -92,9 +112,9 @@
         <p>Feel free to <span class="highlight">connect</span> with me</p>
         <ul class="social-links">
             <li><a href="mailto:adithyas0503@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a></li>
-            <li><a href="https://github.com/AnbudanAdithya/personal-website" target="_blank" class="social-icon"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/s-adithya-918009294/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a></li>
-            <li><a href="https://substack.com/@adithya05" target="_blank" class="social-icon" title = "Substack"><i class="fas fa-blog"></i></a></li>
+            <li><a href="https://github.com/AnbudanAdithya/personal-website" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-github"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/s-adithya-918009294/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-linkedin-in"></i></a></li>
+    <li><a href="https://substack.com/@adithya05" target="_blank" rel="noopener noreferrer" class="social-icon" title="Substack"><i class="fas fa-blog"></i></a></li>
         </ul>
     </section>
 
@@ -102,6 +122,7 @@
         <p>Copyright © <span id="year"></span> SA | Built with 💛 by Adithya</p>
     </footer>
 
+    <button id="scroll-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
     <script src="js/main.js"></script>
 </body>
 </html>

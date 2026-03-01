@@ -100,13 +100,16 @@ body {
 }
 
 /* ── HERO SECTION (Adapted for your content) ──────────────── */
+.hero-wrapper {
+    background: radial-gradient(ellipse at 50% 40%, #1a1a2e 0%, var(--bg-primary) 70%);
+}
+
 .hero {
     min-height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 120px 5% 60px;
-    background: radial-gradient(ellipse at 50% 40%, #1a1a2e 0%, var(--bg-primary) 70%);
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -251,8 +254,35 @@ footer {
     border-top: 1px solid var(--border);
 }
 
+.hamburger { display: none; }
+
 @media (max-width: 768px) {
-    .nav-links { display: none; } /* Add a hamburger menu later if needed */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px; left: 0; right: 0;
+        background: rgba(10, 10, 15, 0.97);
+        padding: 1.5rem 2rem;
+        border-bottom: 1px solid var(--border);
+        gap: 1.2rem;
+    }
+    .nav-links.open { display: flex; }
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 4px;
+    }
+    .hamburger span {
+        width: 25px; height: 2px;
+        background: var(--accent);
+        border-radius: 2px;
+        transition: var(--transition);
+    }
     .hero { flex-direction: column; text-align: center; padding-top: 100px; }
     .hero-content { padding-right: 0; margin-bottom: 3rem; }
     .intro-container { flex-direction: column; }
@@ -277,6 +307,7 @@ footer {
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+    will-change: transform;
 }
 
 .card-item:hover {
@@ -481,3 +512,39 @@ audio::-webkit-media-controls-time-remaining-display {
 
 .audio-item h4 { color: var(--text-primary); margin-bottom: 0.3rem; }
 .audio-item p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem; }
+
+
+/* Keyboard focus styles */
+a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Scroll to top button */
+#scroll-top {
+    position: fixed;
+    bottom: 2rem; right: 2rem;
+    background: var(--accent);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: 50%;
+    width: 44px; height: 44px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(240,192,64,0.3);
+    transition: var(--transition);
+    z-index: 999;
+}
+#scroll-top:hover { background: var(--accent-hover); }
+
+/* Print styles for resume */
+@media print {
+    #navbar, footer, .btn-card, #scroll-top { display: none; }
+    body { background: white; color: black; }
+    .timeline-card { border: 1px solid #ccc; box-shadow: none; transform: none; }
+    .highlight { color: #b8860b; }
+}

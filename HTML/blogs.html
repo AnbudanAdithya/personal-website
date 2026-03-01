@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S Adithya | Portfolio</title>
+    <title>S Adithya | blogs</title>
+    <meta name="description" content="Articles and musings by S Adithya covering life, gratitude, and personal growth.">
     
     <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+    <meta property="og:title" content="S Adithya | Blogs">
+    <meta property="og:description" content="Articles and musings by S Adithya on Substack.">
+    <meta property="og:image" content="https://adithya05.vercel.app/images/avatar.svg">
+    <meta property="og:url" content="https://adithya05.vercel.app/HTML/blogs.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -30,6 +39,9 @@
                     </a>
                 </li>
             </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
@@ -44,7 +56,7 @@
                 <div class="card-body">
                     <h3 class="card-title">Happy Raksha Bandhan!</h3>
                     <p class="card-text">Raksha Bandhan - A day when you strengthen the bond with your sibling with a life long commitment.</p>
-                    <a href="https://open.substack.com/pub/adithya05/p/raksha-bandhan-a-thread-that-ties" target="_blank" class="btn-card"><i class="fas fa-external-link-alt"></i> External Link</a>
+                    <a href="https://open.substack.com/pub/adithya05/p/raksha-bandhan-a-thread-that-ties" target="_blank" rel="noopener noreferrer" class="btn-card"><i class="fas fa-external-link-alt"></i> External Link</a>
                 </div>
             </div>
 
@@ -53,7 +65,7 @@
                 <div class="card-body">
                     <h3 class="card-title">Chasing 100: Why the Journey Is More Important</h3>
                     <p class="card-text">We all strive to hit that perfect 100, but is it the only thing that matters? This post explores the hidden value in the journey.</p>
-                    <a href="https://open.substack.com/pub/adithya05/p/chasing-100-the-beauty-of-the-climb" target="_blank" class="btn-card"><i class="fas fa-external-link-alt"></i> External Link</a>
+                    <a href="https://open.substack.com/pub/adithya05/p/chasing-100-the-beauty-of-the-climb" target="_blank" rel="noopener noreferrer" class="btn-card"><i class="fas fa-external-link-alt"></i> External Link</a>
                 </div>
             </div>
 
@@ -62,7 +74,7 @@
                 <div class="card-body">
                     <h3 class="card-title">Gratitude Program for the Batch of 2024 - 2026</h3>
                     <p class="card-text">As a token of gratitude for being close to the Divine Mother, this blog talks about the unseen hand that has been guiding me.</p>
-                    <a href="https://open.substack.com/pub/adithya05/p/gratitude-program-but-is-gratitude" target="_blank" class="btn-card"><i class="fas fa-external-link-alt"></i> External Link</a>
+                    <a href="https://open.substack.com/pub/adithya05/p/gratitude-program-but-is-gratitude" target="_blank" rel="noopener noreferrer" class="btn-card"><i class="fas fa-external-link-alt"></i> External Link</a>
                 </div>
             </div>
         </div>
@@ -72,6 +84,7 @@
         <p>Copyright © <span id="year"></span> SA | Built with 💛 by Adithya</p>
     </footer>
 
+    <button id="scroll-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
     <script src="../js/main.js"></script>
 </body>
 </html>

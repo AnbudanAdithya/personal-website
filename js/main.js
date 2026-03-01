@@ -23,12 +23,11 @@ let textIndex = 0;
 let charIndex = 0;
 const typingSpeed = 100;
 const erasingSpeed = 50;
-const newTextDelay = 2000; // Delay between current and next text
+const newTextDelay = 2000;
 const typeTarget = document.getElementById("typewriter-text");
 
 function type() {
-    if (!typeTarget) return; // Prevent errors on other pages
-    
+    if (!typeTarget) return;
     if (charIndex < textArray[textIndex].length) {
         typeTarget.textContent += textArray[textIndex].charAt(charIndex);
         charIndex++;
@@ -53,7 +52,7 @@ function erase() {
 // ── INIT ──────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
-    
+
     // Set dynamic footer year
     const yearSpan = document.getElementById('year');
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
@@ -62,6 +61,48 @@ document.addEventListener('DOMContentLoaded', () => {
     if (textArray.length && typeTarget) {
         setTimeout(type, 1000);
     }
+
+    // ── ACTIVE NAV LINK ───────────────────────────────────────
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href') || '';
+        if (
+            (currentPage === 'index.html' && (href.endsWith('index.html') || href === './')) ||
+            (currentPage !== 'index.html' && href.includes(currentPage))
+        ) {
+            link.classList.add('active');
+        }
+    });
+
+    // ── HAMBURGER MENU ────────────────────────────────────────
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    }
+
+    // ── SCROLL TO TOP ─────────────────────────────────────────
+    const scrollBtn = document.getElementById('scroll-top');
+    if (scrollBtn) {
+        window.addEventListener('scroll', () => {
+            scrollBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+        });
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // ── ESCAPE KEY CLOSES MODAL ───────────────────────────────
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal').forEach(m => {
+                if (m.style.display === 'flex') closeModal(m.id);
+            });
+        }
+    });
 });
 
 // ── MODAL / POP-UP LOGIC ──────────────────────────────────────
@@ -69,7 +110,7 @@ function openModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.style.display = "flex";
-        document.body.style.overflow = "hidden"; // Prevents background webpage scrolling
+        document.body.style.overflow = "hidden";
     }
 }
 
@@ -77,18 +118,16 @@ function closeModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.style.display = "none";
-        document.body.style.overflow = "auto"; // Restores webpage scrolling
-        
-        // Find all audio tags in this modal and stop them
+        document.body.style.overflow = "auto";
         const audios = modal.querySelectorAll('audio');
         audios.forEach(audio => {
             audio.pause();
-            audio.currentTime = 0; // Rewinds to the beginning
+            audio.currentTime = 0;
         });
     }
 }
 
-// Close modal if the user clicks anywhere outside of the modal content box
+// Close modal on outside click
 window.addEventListener('click', function(event) {
     if (event.target.classList.contains('modal')) {
         closeModal(event.target.id);
