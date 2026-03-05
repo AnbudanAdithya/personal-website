@@ -5,73 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S Adithya | Hobbies</title>
     <meta name="description" content="Original music compositions by S Adithya created using digital music tools.">
-    
-    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="S Adithya">
+    <meta name="google-site-verification" content="243Jxfwo9YlJnOdazw-0hytEyVnXx2_7Pl5U5anUTYk" />
+    <link rel="canonical" href="https://adithya05.vercel.app/HTML/hobby.html">
+
+    <!-- Open Graph Tags -->
     <meta property="og:title" content="S Adithya | Hobbies">
     <meta property="og:description" content="Original music compositions by S Adithya.">
     <meta property="og:image" content="https://adithya05.vercel.app/images/avatar.svg">
     <meta property="og:url" content="https://adithya05.vercel.app/HTML/hobby.html">
     <meta property="og:type" content="website">
 
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="S Adithya | Hobbies">
+    <meta name="twitter:description" content="Personal Interest of S Adithya.">
+
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QF4BH14FD7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QF4BH14FD7');
+    </script>
 </head>
 <body>
 
+    <!-- ── NAVIGATION ──────────────────────────────────────── -->
     <nav id="navbar">
         <div class="nav-container">
             <a href="../index.html" class="nav-logo">
                 <img src="../images/favicon.svg" alt="Logo">
             </a>
             <ul class="nav-links">
-                <li><a href="../index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="../HTML/resume.html"><i class="far fa-file-alt"></i> Resume</a></li>
                 <li><a href="../HTML/projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
                 <li><a href="../HTML/blogs.html"><i class="fas fa-blog"></i> Blogs</a></li>
                 <li><a href="../HTML/hobby.html"><i class="fas fa-th-large"></i> Hobby</a></li>
                 <li>
-                    <a href="https://github.com/AnbudanAdithya/Website" target="_blank" class="btn-fork">
+                    <a href="https://github.com/AnbudanAdithya/Website" target="_blank" rel="noopener noreferrer" class="btn-fork" aria-label="GitHub repository">
                         <i class="fas fa-code-branch"></i> <i class="fas fa-star"></i>
                     </a>
                 </li>
             </ul>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-            <span></span><span></span><span></span>
+            <button class="hamburger" id="hamburger" aria-label="Open navigation menu" type="button">
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
+    <!-- ── HOBBIES ────────────────────────────────────────────── -->
     <section class="page-section">
         <h2 class="section-title">My <span class="highlight">Hobbies</span></h2>
-        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;">Here are a few things I love doing in my creative downtime.</p>
-        
-        <div class="cards-grid" style="display: flex; justify-content: center;">
-            
-            <div class="card-item hobby-category" onclick="openModal('music-modal')" style="width: 100%; max-width: 500px;">
-                <img src="../images/Hobby/Music-Section.png" alt="Music" class="card-img" style="height: 280px;">
-                <div class="card-body" style="text-align: center;">
-                    <h3 class="card-title" style="font-size: 1.5rem;">Music Composition</h3>
+        <p class="page-subtitle">Here are a few things I love doing in my creative downtime.</p>
+
+        <div class="cards-grid-hobby">
+            <div class="card-item hobby-category hobby-main-card" onclick="openModal('music-modal')">
+                <img src="../images/Hobby/Music-Section.png" alt="Music composition" class="card-img card-img-tall">
+                <div class="card-body card-body-centered">
+                    <h3 class="card-title card-title-lg">Music Composition</h3>
                     <p class="card-text">Explore my original music tracks and beats created using DJ Loop Pads and BandLab.</p>
-                    <button type="button" class="btn-card" style="margin: 0 auto; cursor: pointer;">
+                    <button type="button" class="btn-card btn-card-centered">
                         <i class="fas fa-play-circle"></i> View Tracks
                     </button>
                 </div>
             </div>
+        </div>
 
-            </div>
-
+        <!-- ── MUSIC MODAL ────────────────────────────────────── -->
         <div id="music-modal" class="modal">
             <div class="modal-content">
                 <button class="close-btn" onclick="closeModal('music-modal')" aria-label="Close modal" type="button">&times;</button>
-                <!--- 
-                <span class="close-btn" onclick="closeModal('music-modal')">&times;</span> 
-                -->
-                <h2 style="margin-bottom: 1.5rem; color: var(--accent); text-align: center;">Music Compositions</h2>
-                
+                <h2 class="modal-title">Music Compositions</h2>
+
                 <div class="modal-audio-list">
                     <div class="audio-item">
                         <h4>Music Track - 1</h4>
@@ -95,7 +111,7 @@
                     </div>
                     <div class="audio-item">
                         <h4>Music Track - 5</h4>
-                        <p>I created this music composition created using BandLabs - You might find this familiar.</p>
+                        <p>I created this music composition using BandLab - You might find this familiar.</p>
                         <audio controls><source src="../assets/Hobby/Music_5.mp3" type="audio/mpeg"></audio>
                     </div>
                     <div class="audio-item">
@@ -105,21 +121,20 @@
                     </div>
                     <div class="audio-item">
                         <h4>Music Track - 7</h4>
-                        <p>Listen to this exclusive music piece!.</p>
+                        <p>Listen to this exclusive music piece!</p>
                         <audio controls><source src="../assets/Hobby/Music_7.mp3" type="audio/mpeg"></audio>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
 
-
+    <!-- ── FOOTER ────────────────────────────────────────────── -->
     <footer>
         <p>Copyright © <span id="year"></span> SA | Built with 💛 by Adithya</p>
     </footer>
 
-    <button id="scroll-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+    <button id="scroll-top" aria-label="Back to top" type="button"><i class="fas fa-arrow-up"></i></button>
     <script src="../js/main.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
     --bg-primary:    #0a0a0f;
     --bg-secondary:  #111118;
     --bg-card:       #16161f;
-    --accent:        #f0c040; /* The gold/yellow from finance-portfolio */
+    --accent:        #f0c040;
     --accent-hover:  #e0b030;
     --text-primary:  #ffffff;
     --text-secondary:#a0a0b0;
@@ -83,9 +83,9 @@ body {
     gap: 6px;
 }
 
-.nav-links a:hover, .nav-links a.active { color: var(--accent); }
+.nav-links a:hover,
+.nav-links a.active { color: var(--accent); }
 
-/* Fork Button in Nav */
 .btn-fork {
     background: rgba(240, 192, 64, 0.1);
     color: var(--accent) !important;
@@ -99,7 +99,9 @@ body {
     color: var(--bg-primary) !important;
 }
 
-/* ── HERO SECTION (Adapted for your content) ──────────────── */
+.hamburger { display: none; }
+
+/* ── HERO ─────────────────────────────────────────────────── */
 .hero-wrapper {
     background: radial-gradient(ellipse at 50% 40%, #1a1a2e 0%, var(--bg-primary) 70%);
 }
@@ -140,7 +142,6 @@ body {
 
 .highlight { color: var(--accent); }
 
-/* Typewriter Wrapper */
 .typewriter-wrapper {
     font-size: 1.8rem;
     color: var(--accent);
@@ -162,14 +163,14 @@ body {
     display: inline-block;
 }
 @keyframes wave-animation {
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(14deg); }
-    20% { transform: rotate(-8deg); }
-    30% { transform: rotate(14deg); }
-    40% { transform: rotate(-4deg); }
-    50% { transform: rotate(10deg); }
-    60% { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
+    0%   { transform: rotate(0deg);  }
+    10%  { transform: rotate(14deg); }
+    20%  { transform: rotate(-8deg); }
+    30%  { transform: rotate(14deg); }
+    40%  { transform: rotate(-4deg); }
+    50%  { transform: rotate(10deg); }
+    60%  { transform: rotate(0deg);  }
+    100% { transform: rotate(0deg);  }
 }
 
 /* ── ABOUT / INTRO SECTION ───────────────────────────────── */
@@ -188,27 +189,32 @@ body {
 
 .intro-text { flex: 1.5; }
 .intro-text h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
-.intro-text p { color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 1rem; text-align: justify;}
+.intro-text p { color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 1rem; text-align: justify; }
 
 .intro-avatar { flex: 1; text-align: center; }
 .intro-avatar img { max-width: 300px; border-radius: 50%; border: 2px solid var(--accent); padding: 10px; background: var(--bg-card); }
-
 
 .intro-list { list-style: none; padding-left: 0; margin-top: 1.5rem; }
 .intro-list li { color: var(--text-secondary); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
 .intro-list i { color: var(--accent); }
 
-.quote-box { margin-top: 2rem; padding: 1.5rem; border-left: 4px solid var(--accent); background: rgba(240, 192, 64, 0.05); }
-.quote-box p { font-style: italic; color: var(--text-secondary); }
-.quote-box footer { 
-    text-align: right; 
-    color: var(--accent); 
-    font-weight: 600; 
-    margin-top: 10px; 
-    border-top: none; 
-    padding: 0;
-    background: transparent; /* <--- This completely removes the clashing dark block! */
+.quote-box {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent);
+    background: rgba(240, 192, 64, 0.05);
 }
+.quote-box p { font-style: italic; color: var(--text-secondary); }
+.quote-box footer {
+    text-align: right;
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 10px;
+    border-top: none;
+    padding: 0;
+    background: transparent;
+}
+
 /* ── SOCIAL LINKS ────────────────────────────────────────── */
 .social-section { text-align: center; padding: 60px 2rem; }
 .social-section h2 { margin-bottom: 0.5rem; }
@@ -254,45 +260,13 @@ footer {
     border-top: 1px solid var(--border);
 }
 
-.hamburger { display: none; }
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px; left: 0; right: 0;
-        background: rgba(10, 10, 15, 0.97);
-        padding: 1.5rem 2rem;
-        border-bottom: 1px solid var(--border);
-        gap: 1.2rem;
-    }
-    .nav-links.open { display: flex; }
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-        background: none;
-        border: none;
-        padding: 4px;
-    }
-    .hamburger span {
-        width: 25px; height: 2px;
-        background: var(--accent);
-        border-radius: 2px;
-        transition: var(--transition);
-    }
-    .hero { flex-direction: column; text-align: center; padding-top: 100px; }
-    .hero-content { padding-right: 0; margin-bottom: 3rem; }
-    .intro-container { flex-direction: column; }
-}
-
-/* ── GRIDS & CARDS (For Projects, Blogs, Hobbies) ──────────────── */
+/* ── PAGE SECTIONS ───────────────────────────────────────── */
 .page-section { padding: 120px 5% 60px; max-width: 1400px; margin: 0 auto; }
+
 .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; font-weight: 700; }
 .section-title .highlight { color: var(--accent); }
 
+/* ── CARDS GRID ──────────────────────────────────────────── */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -333,11 +307,13 @@ footer {
     align-items: center;
     gap: 8px;
     width: fit-content;
+    cursor: pointer;
 }
 .btn-card:hover { background: var(--accent); color: var(--bg-primary); }
 
-/* ── RESUME PAGE SPECIFICS ───────────────────────────────── */
+/* ── RESUME PAGE ─────────────────────────────────────────── */
 .resume-container { max-width: 900px; margin: 0 auto 4rem; }
+
 .timeline-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -360,40 +336,33 @@ footer {
 .timeline-right ul { padding-left: 1.2rem; color: var(--text-secondary); text-align: justify; }
 .timeline-right ul li { margin-bottom: 8px; }
 
-/* ── AUDIO PLAYER FOR HOBBY ──────────────────────────────── */
-audio { 
-    width: 100%; 
-    height: 48px; 
-    border-radius: 8px; 
-    outline: none; 
-    margin-top: 12px; 
-    /* Forces the browser to use light icons (white) instead of dark ones */
-    color-scheme: dark; 
-    /* A subtle golden border to match your theme */
-    border: 1px solid rgba(240, 192, 64, 0.3); 
+/* ── AUDIO PLAYER ────────────────────────────────────────── */
+audio {
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    outline: none;
+    margin-top: 12px;
+    color-scheme: dark;
+    border: 1px solid rgba(240, 192, 64, 0.3);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Override the Chrome/Safari/Edge internal player background */
 audio::-webkit-media-controls-enclosure {
-    /* A very faint golden/dark tint instead of pitch black */
-    background-color: rgba(240, 192, 64, 0.05); 
+    background-color: rgba(240, 192, 64, 0.05);
     border-radius: 8px;
 }
 
-audio::-webkit-media-controls-panel { 
-    background-color: transparent; 
-}
+audio::-webkit-media-controls-panel { background-color: transparent; }
 
-/* Style the timestamp numbers to use your gold accent color */
 audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display { 
-    color: var(--accent); 
+audio::-webkit-media-controls-time-remaining-display {
+    color: var(--accent);
     font-family: var(--font);
     font-weight: 500;
 }
 
-/* ── HOME PAGE MINI TECH GRID & HEADING ──────────────────── */
+/* ── HOME PAGE TECH GRID ─────────────────────────────────── */
 .tools-heading {
     text-align: center;
     color: var(--text-secondary);
@@ -401,34 +370,32 @@ audio::-webkit-media-controls-time-remaining-display {
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-top: 1.5rem;   /* Space between avatar and heading */
-    margin-bottom: 0.8rem; /* Space between heading and grid */
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .home-tech-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;           
-    margin-top: 0;           /* Removed top margin since the heading handles it now */
-    justify-content: center; /* Centers the grid perfectly under the image */
+    gap: 12px;
+    justify-content: center;
 }
 
 .home-tech-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45px;         
+    width: 45px;
     height: 45px;
     font-size: 1.5rem;
     color: var(--text-secondary);
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 8px;
-    transition: all 0.3s ease;
+    transition: var(--transition);
     cursor: default;
 }
 
-/* The Animation Effect */
 .home-tech-icon:hover {
     color: var(--accent);
     border-color: var(--accent);
@@ -437,19 +404,17 @@ audio::-webkit-media-controls-time-remaining-display {
     z-index: 10;
 }
 
-/* ── MODAL / POP-UP STYLES ──────────────────────────────── */
+/* ── MODAL ───────────────────────────────────────────────── */
 .hobby-category { cursor: pointer; }
 .hobby-category:hover .btn-card { background: var(--accent); color: var(--bg-primary); }
 
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
-    z-index: 2000; /* Sits on top of everything, including the navbar */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(10, 10, 15, 0.85); /* Dark transparent overlay */
+    z-index: 2000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(10, 10, 15, 0.85);
     backdrop-filter: blur(8px);
     align-items: center;
     justify-content: center;
@@ -463,7 +428,7 @@ audio::-webkit-media-controls-time-remaining-display {
     width: 90%;
     max-width: 600px;
     max-height: 85vh;
-    overflow-y: auto; /* Allows scrolling inside the popup if there are many songs */
+    overflow-y: auto;
     position: relative;
     animation: modalFadeIn 0.15s ease-out;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -471,26 +436,23 @@ audio::-webkit-media-controls-time-remaining-display {
 
 @keyframes modalFadeIn {
     from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 .close-btn {
     color: var(--text-secondary);
     position: absolute;
-    top: 15px;
-    right: 20px;
+    top: 15px; right: 20px;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
     transition: var(--transition);
     line-height: 1;
+    background: none;
+    border: none;
 }
+.close-btn:hover { color: var(--accent); }
 
-.close-btn:hover {
-    color: var(--accent);
-}
-
-/* Internal Layout for Songs */
 .modal-audio-list {
     display: flex;
     flex-direction: column;
@@ -504,24 +466,14 @@ audio::-webkit-media-controls-time-remaining-display {
     border-left: 3px solid var(--border);
     transition: var(--transition);
 }
-
 .audio-item:hover {
     border-left-color: var(--accent);
     background: rgba(255, 255, 255, 0.04);
 }
-
 .audio-item h4 { color: var(--text-primary); margin-bottom: 0.3rem; }
-.audio-item p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem; }
+.audio-item p  { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem; }
 
-
-/* Keyboard focus styles */
-a:focus-visible, button:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
-    border-radius: 4px;
-}
-
-/* Scroll to top button */
+/* ── SCROLL TO TOP ───────────────────────────────────────── */
 #scroll-top {
     position: fixed;
     bottom: 2rem; right: 2rem;
@@ -541,10 +493,167 @@ a:focus-visible, button:focus-visible {
 }
 #scroll-top:hover { background: var(--accent-hover); }
 
-/* Print styles for resume */
+/* ── FOCUS STYLES ────────────────────────────────────────── */
+a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* ── PRINT STYLES ────────────────────────────────────────── */
 @media print {
     #navbar, footer, .btn-card, #scroll-top { display: none; }
     body { background: white; color: black; }
     .timeline-card { border: 1px solid #ccc; box-shadow: none; transform: none; }
     .highlight { color: #b8860b; }
+}
+
+/* ── RESPONSIVE (mobile) ─────────────────────────────────── */
+@media (max-width: 768px) {
+    /* Navigation */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px; left: 0; right: 0;
+        background: rgba(10, 10, 15, 0.97);
+        padding: 1.5rem 2rem;
+        border-bottom: 1px solid var(--border);
+        gap: 1.2rem;
+    }
+    .nav-links.open { display: flex; }
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 4px;
+    }
+    .hamburger span {
+        width: 25px; height: 2px;
+        background: var(--accent);
+        border-radius: 2px;
+        transition: var(--transition);
+    }
+
+    /* Hero */
+    .hero { flex-direction: column; text-align: center; padding-top: 100px; }
+    .hero-content { padding-right: 0; margin-bottom: 3rem; }
+
+    /* Intro */
+    .intro-container { flex-direction: column; }
+
+    /* Projects portal */
+    .portal-grid { grid-template-columns: 1fr; }
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* ── NEW UTILITY CLASSES (replaces all inline styles) ─────── */
+/* ─────────────────────────────────────────────────────────── */
+
+/* Shared subtitle paragraph under section headings */
+.page-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+/* Larger variant used on the Projects portal page */
+.page-subtitle-lg {
+    font-size: 1.1rem;
+    margin-bottom: 4rem;
+}
+
+/* Small top margin used on the "hobbies" intro line in index.html */
+.intro-hobbies-intro { margin-top: 1rem; }
+
+/* ── HOBBY PAGE ──────────────────────────────────────────── */
+
+/* Wraps the single music card centered on the page */
+.cards-grid-hobby {
+    display: flex;
+    justify-content: center;
+}
+
+/* The music card itself */
+.hobby-main-card {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Taller card image for the hobby card */
+.card-img-tall { height: 280px; }
+
+/* Center-aligned card body (used in hobby card) */
+.card-body-centered { text-align: center; }
+
+/* Larger card title (hobby card) */
+.card-title-lg { font-size: 1.5rem; }
+
+/* Centered button inside card body */
+.btn-card-centered { margin: 0 auto; }
+
+/* Modal heading */
+.modal-title {
+    margin-bottom: 1.5rem;
+    color: var(--accent);
+    text-align: center;
+}
+
+/* ── PROJECTS PORTAL PAGE ────────────────────────────────── */
+
+/* Override grid for the 2-column portal layout */
+.portal-grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Thicker border on portal cards */
+.portal-card { border-width: 2px; }
+
+/* More padding inside portal card bodies */
+.portal-card-body { padding: 2rem; }
+
+/* Tall image for portal cards */
+.card-img-portal { height: 280px; }
+
+/* Extra-large centered title for portal cards */
+.card-title-xl {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+/* Centered card text with extra bottom margin */
+.card-text-centered {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Full-width, larger button for portal cards */
+.btn-card-full {
+    width: 100%;
+    justify-content: center;
+    font-size: 1.1rem;
+    padding: 12px 16px;
+}
+
+/* ── RESUME PAGE ─────────────────────────────────────────── */
+
+/* Extra top spacing before the Education heading */
+.section-title-mt { margin-top: 5rem; }
+
+/* CV download wrapper */
+.cv-download-section {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+/* Larger download button */
+.btn-card-lg {
+    font-size: 1.1rem;
+    padding: 12px 24px;
 }
