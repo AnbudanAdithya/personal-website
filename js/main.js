@@ -63,14 +63,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ── ACTIVE NAV LINK ───────────────────────────────────────
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const path = window.location.pathname;
+    const currentPage = path.split('/').pop() || '';
+    const isHome = (currentPage === '' || currentPage === 'index.html');
+
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.classList.remove('active');
         const href = link.getAttribute('href') || '';
-        if (
-            (currentPage === 'index.html' && (href.endsWith('index.html') || href === './')) ||
-            (currentPage !== 'index.html' && href.includes(currentPage))
-        ) {
+        if (isHome && (href === '/' || href === 'index.html' || href.endsWith('/index.html'))) {
+            link.classList.add('active');
+        } else if (!isHome && currentPage && href.includes(currentPage)) {
             link.classList.add('active');
         }
     });

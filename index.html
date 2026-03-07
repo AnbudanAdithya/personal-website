@@ -24,16 +24,16 @@
 
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 
-    <!-- Google Fonts (render-blocking kept intentional — small payload) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 
-    <!-- Font Awesome — loaded async to eliminate render-blocking -->
+    <!-- Font Awesome — async to eliminate render-blocking -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
-    <!-- Devicon — loaded async to eliminate render-blocking -->
+    <!-- Devicon — async to eliminate render-blocking -->
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"></noscript>
 
@@ -53,11 +53,11 @@
     <!-- ── NAVIGATION ──────────────────────────────────────── -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">
+            <a href="/" class="nav-logo">
                 <img src="images/favicon.svg" alt="Logo" width="35" height="35">
             </a>
             <ul class="nav-links">
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="HTML/resume.html"><i class="far fa-file-alt"></i> Resume</a></li>
                 <li><a href="HTML/projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
                 <li><a href="HTML/blogs.html"><i class="fas fa-blog"></i> Blogs</a></li>
@@ -120,7 +120,6 @@
 
                 <div class="intro-avatar">
                     <img src="images/avatar.svg" alt="Avatar of S Adithya" width="300" height="300">
-                    <!-- Fixed: h3 instead of h4 to maintain heading order (h2 → h3) -->
                     <h3 class="tools-heading">TOOLS I USE</h3>
                     <div class="home-tech-grid">
                         <div class="home-tech-icon" title="Python"><i class="devicon-python-plain"></i></div>
