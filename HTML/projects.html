@@ -26,7 +26,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Font Awesome — loaded async to eliminate render-blocking -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
     <link rel="stylesheet" href="../css/style.css">
 
     <!-- Google tag (gtag.js) -->
@@ -44,7 +48,7 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="../index.html" class="nav-logo">
-                <img src="../images/favicon.svg" alt="Logo">
+                <img src="../images/favicon.svg" alt="Logo" width="35" height="35">
             </a>
             <ul class="nav-links">
                 <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
@@ -64,41 +68,43 @@
         </div>
     </nav>
 
-    <!-- ── PROJECTS PORTAL ───────────────────────────────────── -->
-    <section class="page-section">
-        <h2 class="section-title">My Project <span class="highlight">Portfolios</span></h2>
-        <p class="page-subtitle page-subtitle-lg">Select a domain below to explore my dedicated project websites.</p>
+    <main>
+        <!-- ── PROJECTS PORTAL ───────────────────────────────────── -->
+        <section class="page-section">
+            <h2 class="section-title">My Project <span class="highlight">Portfolios</span></h2>
+            <p class="page-subtitle page-subtitle-lg">Select a domain below to explore my dedicated project websites.</p>
 
-        <div class="cards-grid portal-grid">
+            <div class="cards-grid portal-grid">
 
-            <div class="card-item portal-card">
-                <img src="../images/Projects/finance-web.png" alt="Finance Portfolio" class="card-img card-img-portal">
-                <div class="card-body portal-card-body">
-                    <h3 class="card-title card-title-xl">Finance & Analytics</h3>
-                    <p class="card-text card-text-centered">
-                        Dive into my specialized portfolio showcasing financial modeling, predictive analytics, EMI & Tax calculators, and data-driven projects built with Python, SQL, and Excel.
-                    </p>
-                    <a href="https://sa05-finance.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-full">
-                        <i class="fas fa-external-link-alt"></i> Visit Portfolio
-                    </a>
+                <div class="card-item portal-card">
+                    <img src="../images/Projects/finance-web.png" alt="Finance Portfolio" class="card-img card-img-portal">
+                    <div class="card-body portal-card-body">
+                        <h3 class="card-title card-title-xl">Finance & Analytics</h3>
+                        <p class="card-text card-text-centered">
+                            Dive into my specialized portfolio showcasing financial modeling, predictive analytics, EMI & Tax calculators, and data-driven projects built with Python, SQL, and Excel.
+                        </p>
+                        <a href="https://sa05-finance.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-full">
+                            <i class="fas fa-external-link-alt"></i> Visit Portfolio
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card-item portal-card">
-                <img src="../images/Projects/market-web.png" alt="Research Portfolio" class="card-img card-img-portal">
-                <div class="card-body portal-card-body">
-                    <h3 class="card-title card-title-xl">Market Research & Studies</h3>
-                    <p class="card-text card-text-centered">
-                        Explore my collection of comprehensive market research reports, FinTech industry analyses, business case studies, and book reviews.
-                    </p>
-                    <a href="https://sa05-projects.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-full">
-                        <i class="fas fa-external-link-alt"></i> Visit Portfolio
-                    </a>
+                <div class="card-item portal-card">
+                    <img src="../images/Projects/market-web.png" alt="Research Portfolio" class="card-img card-img-portal">
+                    <div class="card-body portal-card-body">
+                        <h3 class="card-title card-title-xl">Market Research & Studies</h3>
+                        <p class="card-text card-text-centered">
+                            Explore my collection of comprehensive market research reports, FinTech industry analyses, business case studies, and book reviews.
+                        </p>
+                        <a href="https://sa05-projects.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-full">
+                            <i class="fas fa-external-link-alt"></i> Visit Portfolio
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-        </div>
-    </section>
+            </div>
+        </section>
+    </main>
 
     <!-- ── FOOTER ────────────────────────────────────────────── -->
     <footer>

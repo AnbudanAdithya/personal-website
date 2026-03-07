@@ -23,11 +23,20 @@
     <meta name="twitter:description" content="MBA candidate passionate about finance, analytics, and music.">
 
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Google Fonts (render-blocking kept intentional — small payload) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <!-- Font Awesome — loaded async to eliminate render-blocking -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- Devicon — loaded async to eliminate render-blocking -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"></noscript>
+
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Google tag (gtag.js) -->
@@ -45,7 +54,7 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <img src="images/favicon.svg" alt="Logo">
+                <img src="images/favicon.svg" alt="Logo" width="35" height="35">
             </a>
             <ul class="nav-links">
                 <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
@@ -65,78 +74,81 @@
         </div>
     </nav>
 
-    <!-- ── HERO ─────────────────────────────────────────────── -->
-    <div class="hero-wrapper">
-        <section class="hero">
-            <div class="hero-content">
-                <p class="hero-tag">MBA Student & Finance Enthusiast</p>
-                <h1>Hi There! <span class="wave">👋🏻</span></h1>
-                <h1>I'M <span class="highlight">ADITHYA</span></h1>
-                <div class="typewriter-wrapper" id="typewriter-text"></div>
-            </div>
-            <div class="hero-image">
-                <img src="images/Home-main.svg" alt="Home Graphic">
+    <main>
+        <!-- ── HERO ─────────────────────────────────────────────── -->
+        <div class="hero-wrapper">
+            <section class="hero">
+                <div class="hero-content">
+                    <p class="hero-tag">MBA Student & Finance Enthusiast</p>
+                    <h1>Hi There! <span class="wave">👋🏻</span></h1>
+                    <h1>I'M <span class="highlight">ADITHYA</span></h1>
+                    <div class="typewriter-wrapper" id="typewriter-text"></div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/Home-main.svg" alt="Home Graphic" width="500" height="450" fetchpriority="high">
+                </div>
+            </section>
+        </div>
+
+        <!-- ── ABOUT / INTRO ─────────────────────────────────────── -->
+        <section class="about-intro">
+            <div class="intro-container">
+                <div class="intro-text">
+                    <h2>LET ME <span class="highlight">INTRODUCE</span> MYSELF</h2>
+                    <p>I am an MBA student at <b class="highlight">Sri Sathya Sai Institute of Higher Learning,</b> specializing in Finance & Analytics.
+                    My academic path has been deliberately built around the intersection of rigorous financial analysis, quantitiative modelling and technology driven finance solutions.</p>
+                    <p>I completed my <b class="highlight">B.Com (Hons.) in Accounting and Finance</b> at SSSIHL (CGPA: 7.8).
+                    I have a proven ability to lead teams and deliver results through analytical problem thinking. I am eager to apply my skills in a dynamic growth focused role.</p>
+
+                    <div class="quote-box">
+                        <p>"I don't just study finance — I try to understand why companies succeed or fail, what the numbers are really saying, and how technology is reshaping financial services."</p>
+                    </div>
+
+                    <p class="intro-hobbies-intro">Some hobbies that I love to do are</p>
+                    <ul class="intro-list">
+                        <li><i class="far fa-hand-point-right"></i> Listening & Creating Music</li>
+                        <li><i class="far fa-hand-point-right"></i> Singing</li>
+                        <li><i class="far fa-hand-point-right"></i> Learning New Stuff Everyday</li>
+                        <li><i class="far fa-hand-point-right"></i> Reading Novels (Fan of Dan Brown and David Balducci)</li>
+                    </ul>
+
+                    <div class="quote-box">
+                        <p>"If you ignore the negatives and accept the positives, you will achieve excellence!"</p>
+                        <footer>~ S. Adithya</footer>
+                    </div>
+                </div>
+
+                <div class="intro-avatar">
+                    <img src="images/avatar.svg" alt="Avatar of S Adithya" width="300" height="300">
+                    <!-- Fixed: h3 instead of h4 to maintain heading order (h2 → h3) -->
+                    <h3 class="tools-heading">TOOLS I USE</h3>
+                    <div class="home-tech-grid">
+                        <div class="home-tech-icon" title="Python"><i class="devicon-python-plain"></i></div>
+                        <div class="home-tech-icon" title="R"><i class="devicon-r-original"></i></div>
+                        <div class="home-tech-icon" title="SQL Server"><i class="devicon-microsoftsqlserver-plain"></i></div>
+                        <div class="home-tech-icon" title="Excel"><i class="fas fa-file-excel"></i></div>
+                        <div class="home-tech-icon" title="PowerPoint"><i class="fas fa-file-powerpoint"></i></div>
+                        <div class="home-tech-icon" title="Word"><i class="fas fa-file-word"></i></div>
+                        <div class="home-tech-icon" title="Canva"><i class="devicon-canva-original"></i></div>
+                        <div class="home-tech-icon" title="VS Code"><i class="devicon-vscode-plain"></i></div>
+                        <div class="home-tech-icon" title="GitHub"><i class="devicon-github-original"></i></div>
+                    </div>
+                </div>
             </div>
         </section>
-    </div>
 
-    <!-- ── ABOUT / INTRO ─────────────────────────────────────── -->
-    <section class="about-intro">
-        <div class="intro-container">
-            <div class="intro-text">
-                <h2>LET ME <span class="highlight">INTRODUCE</span> MYSELF</h2>
-                <p>I am an MBA student at <b class="highlight">Sri Sathya Sai Institute of Higher Learning,</b> specializing in Finance & Analytics.
-                My academic path has been deliberately built around the intersection of rigorous financial analysis, quantitiative modelling and technology driven finance solutions.</p>
-                <p>I completed my <b class="highlight">B.Com (Hons.) in Accounting and Finance</b> at SSSIHL (CGPA: 7.8).
-                I have a proven ability to lead teams and deliver results through analytical problem thinking. I am eager to apply my skills in a dynamic growth focused role.</p>
-
-                <div class="quote-box">
-                    <p>"I don't just study finance — I try to understand why companies succeed or fail, what the numbers are really saying, and how technology is reshaping financial services."</p>
-                </div>
-
-                <p class="intro-hobbies-intro">Some hobbies that I love to do are</p>
-                <ul class="intro-list">
-                    <li><i class="far fa-hand-point-right"></i> Listening & Creating Music</li>
-                    <li><i class="far fa-hand-point-right"></i> Singing</li>
-                    <li><i class="far fa-hand-point-right"></i> Learning New Stuff Everyday</li>
-                    <li><i class="far fa-hand-point-right"></i> Reading Novels (Fan of Dan Brown and David Balducci)</li>
-                </ul>
-
-                <div class="quote-box">
-                    <p>"If you ignore the negatives and accept the positives, you will achieve excellence!"</p>
-                    <footer>~ S. Adithya</footer>
-                </div>
-            </div>
-
-            <div class="intro-avatar">
-                <img src="images/avatar.svg" alt="Avatar of S Adithya">
-                <h4 class="tools-heading">TOOLS I USE</h4>
-                <div class="home-tech-grid">
-                    <div class="home-tech-icon" title="Python"><i class="devicon-python-plain"></i></div>
-                    <div class="home-tech-icon" title="R"><i class="devicon-r-original"></i></div>
-                    <div class="home-tech-icon" title="SQL Server"><i class="devicon-microsoftsqlserver-plain"></i></div>
-                    <div class="home-tech-icon" title="Excel"><i class="fas fa-file-excel"></i></div>
-                    <div class="home-tech-icon" title="PowerPoint"><i class="fas fa-file-powerpoint"></i></div>
-                    <div class="home-tech-icon" title="Word"><i class="fas fa-file-word"></i></div>
-                    <div class="home-tech-icon" title="Canva"><i class="devicon-canva-original"></i></div>
-                    <div class="home-tech-icon" title="VS Code"><i class="devicon-vscode-plain"></i></div>
-                    <div class="home-tech-icon" title="GitHub"><i class="devicon-github-original"></i></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── SOCIAL LINKS ───────────────────────────────────────── -->
-    <section class="social-section">
-        <h2>FIND ME ON</h2>
-        <p>Feel free to <span class="highlight">connect</span> with me</p>
-        <ul class="social-links">
-            <li><a href="mailto:adithyas0503@gmail.com" class="social-icon" aria-label="Send email to S Adithya"><i class="fas fa-envelope"></i></a></li>
-            <li><a href="https://github.com/AnbudanAdithya/personal-website" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub profile"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/s-adithya-918009294/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in"></i></a></li>
-            <li><a href="https://substack.com/@adithya05" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Substack blog"><i class="fas fa-blog"></i></a></li>
-        </ul>
-    </section>
+        <!-- ── SOCIAL LINKS ───────────────────────────────────────── -->
+        <section class="social-section">
+            <h2>FIND ME ON</h2>
+            <p>Feel free to <span class="highlight">connect</span> with me</p>
+            <ul class="social-links">
+                <li><a href="mailto:adithyas0503@gmail.com" class="social-icon" aria-label="Send email to S Adithya"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://github.com/AnbudanAdithya/personal-website" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub profile"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/s-adithya-918009294/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn profile"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://substack.com/@adithya05" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Substack blog"><i class="fas fa-blog"></i></a></li>
+            </ul>
+        </section>
+    </main>
 
     <!-- ── FOOTER ────────────────────────────────────────────── -->
     <footer>

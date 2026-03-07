@@ -26,7 +26,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Font Awesome — loaded async to eliminate render-blocking -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
     <link rel="stylesheet" href="../css/style.css">
 
     <!-- Google tag (gtag.js) -->
@@ -44,7 +48,7 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="../index.html" class="nav-logo">
-                <img src="../images/favicon.svg" alt="Logo">
+                <img src="../images/favicon.svg" alt="Logo" width="35" height="35">
             </a>
             <ul class="nav-links">
                 <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
@@ -64,48 +68,50 @@
         </div>
     </nav>
 
-    <!-- ── BLOGS ─────────────────────────────────────────────── -->
-    <section class="page-section">
-        <h2 class="section-title">My Recent <span class="highlight">Blogs</span></h2>
-        <p class="page-subtitle">Here are a few pieces I've written recently.</p>
+    <main>
+        <!-- ── BLOGS ─────────────────────────────────────────────── -->
+        <section class="page-section">
+            <h2 class="section-title">My Recent <span class="highlight">Blogs</span></h2>
+            <p class="page-subtitle">Here are a few pieces I've written recently.</p>
 
-        <div class="cards-grid">
+            <div class="cards-grid">
 
-            <div class="card-item">
-                <img src="../images/Blogs/GP.jpg" alt="Gratitude Program blog post" class="card-img">
-                <div class="card-body">
-                    <h3 class="card-title">Gratitude Program for the Batch of 2024 - 2026</h3>
-                    <p class="card-text">As a token of gratitude for being close to the Divine Mother, this blog talks about the unseen hand that has been guiding me.</p>
-                    <a href="https://open.substack.com/pub/adithya05/p/gratitude-program-but-is-gratitude" target="_blank" rel="noopener noreferrer" class="btn-card">
-                        <i class="fas fa-external-link-alt"></i> External Link
-                    </a>
+                <div class="card-item">
+                    <img src="../images/Blogs/GP.jpg" alt="Gratitude Program blog post" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">Gratitude Program for the Batch of 2024 - 2026</h3>
+                        <p class="card-text">As a token of gratitude for being close to the Divine Mother, this blog talks about the unseen hand that has been guiding me.</p>
+                        <a href="https://open.substack.com/pub/adithya05/p/gratitude-program-but-is-gratitude" target="_blank" rel="noopener noreferrer" class="btn-card">
+                            <i class="fas fa-external-link-alt"></i> External Link
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card-item">
-                <img src="../images/Blogs/100.png" alt="Chasing 100 blog post" class="card-img">
-                <div class="card-body">
-                    <h3 class="card-title">Chasing 100: Why the Journey Is More Important</h3>
-                    <p class="card-text">We all strive to hit that perfect 100, but is it the only thing that matters? This post explores the hidden value in the journey.</p>
-                    <a href="https://open.substack.com/pub/adithya05/p/chasing-100-the-beauty-of-the-climb" target="_blank" rel="noopener noreferrer" class="btn-card">
-                        <i class="fas fa-external-link-alt"></i> External Link
-                    </a>
+                <div class="card-item">
+                    <img src="../images/Blogs/100.png" alt="Chasing 100 blog post" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">Chasing 100: Why the Journey Is More Important</h3>
+                        <p class="card-text">We all strive to hit that perfect 100, but is it the only thing that matters? This post explores the hidden value in the journey.</p>
+                        <a href="https://open.substack.com/pub/adithya05/p/chasing-100-the-beauty-of-the-climb" target="_blank" rel="noopener noreferrer" class="btn-card">
+                            <i class="fas fa-external-link-alt"></i> External Link
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card-item">
-                <img src="../images/Blogs/Raksha_Bandhan.png" alt="Raksha Bandhan blog post" class="card-img">
-                <div class="card-body">
-                    <h3 class="card-title">Happy Raksha Bandhan!</h3>
-                    <p class="card-text">Raksha Bandhan - A day when you strengthen the bond with your sibling with a life long commitment.</p>
-                    <a href="https://open.substack.com/pub/adithya05/p/raksha-bandhan-a-thread-that-ties" target="_blank" rel="noopener noreferrer" class="btn-card">
-                        <i class="fas fa-external-link-alt"></i> External Link
-                    </a>
+                <div class="card-item">
+                    <img src="../images/Blogs/Raksha_Bandhan.png" alt="Raksha Bandhan blog post" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">Happy Raksha Bandhan!</h3>
+                        <p class="card-text">Raksha Bandhan - A day when you strengthen the bond with your sibling with a life long commitment.</p>
+                        <a href="https://open.substack.com/pub/adithya05/p/raksha-bandhan-a-thread-that-ties" target="_blank" rel="noopener noreferrer" class="btn-card">
+                            <i class="fas fa-external-link-alt"></i> External Link
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-        </div>
-    </section>
+            </div>
+        </section>
+    </main>
 
     <!-- ── FOOTER ────────────────────────────────────────────── -->
     <footer>

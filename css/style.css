@@ -255,7 +255,8 @@ footer {
     text-align: center;
     padding: 2rem;
     background: var(--bg-card);
-    color: var(--text-muted);
+    /* Fixed: was --text-muted (#606070) which fails contrast; --text-secondary (#a0a0b0) passes */
+    color: var(--text-secondary);
     font-size: 0.9rem;
     border-top: 1px solid var(--border);
 }
@@ -363,6 +364,7 @@ audio::-webkit-media-controls-time-remaining-display {
 }
 
 /* ── HOME PAGE TECH GRID ─────────────────────────────────── */
+/* Now styled as h3 (changed from h4 to fix heading order) */
 .tools-heading {
     text-align: center;
     color: var(--text-secondary);

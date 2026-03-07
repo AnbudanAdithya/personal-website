@@ -26,7 +26,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Font Awesome — loaded async to eliminate render-blocking -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
     <link rel="stylesheet" href="../css/style.css">
 
     <!-- Google tag (gtag.js) -->
@@ -44,7 +48,7 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="../index.html" class="nav-logo">
-                <img src="../images/favicon.svg" alt="Logo">
+                <img src="../images/favicon.svg" alt="Logo" width="35" height="35">
             </a>
             <ul class="nav-links">
                 <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
@@ -64,75 +68,77 @@
         </div>
     </nav>
 
-    <!-- ── EXPERIENCE ────────────────────────────────────────── -->
-    <section class="page-section">
-        <h2 class="section-title">Professional <span class="highlight">Experience</span></h2>
-        <div class="resume-container">
-            <div class="timeline-card">
-                <div class="timeline-left">
-                    <h4>Finance Intern</h4>
-                    <p>May 2025 - June 2025 (2 Months)</p>
+    <main>
+        <!-- ── EXPERIENCE ────────────────────────────────────────── -->
+        <section class="page-section">
+            <h2 class="section-title">Professional <span class="highlight">Experience</span></h2>
+            <div class="resume-container">
+                <div class="timeline-card">
+                    <div class="timeline-left">
+                        <h4>Finance Intern</h4>
+                        <p>May 2025 - June 2025 (2 Months)</p>
+                    </div>
+                    <div class="timeline-right">
+                        <h5>Ashok Leyland Limited.</h5>
+                        <ul>
+                            <li>Worked within the finance team on <b class="highlight">invoice validation, vendor reconciliations, fixed asset accounting</b> within SAP-based workflows.</li>
+                            <li><b class="highlight">Assisted</b> in depreciation calculations and documentation of capital assets, strengthening understanding of accounting controls and compliance.</li>
+                            <li>Streamlined reporting support activities, <b class="highlight">reducing manager workload by 5%.</b></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="timeline-right">
-                    <h5>Ashok Leyland Limited.</h5>
-                    <ul>
-                        <li>Worked within the finance team on <b class="highlight">invoice validation, vendor reconciliations, fixed asset accounting</b> within SAP-based workflows.</li>
-                        <li><b class="highlight">Assisted</b> in depreciation calculations and documentation of capital assets, strengthening understanding of accounting controls and compliance.</li>
-                        <li>Streamlined reporting support activities, <b class="highlight">reducing manager workload by 5%.</b></li>
-                    </ul>
+
+                <div class="timeline-card">
+                    <div class="timeline-left">
+                        <h4>Student Head of Cooperative Society Stores</h4>
+                        <p>August 2022 - Present</p>
+                    </div>
+                    <div class="timeline-right">
+                        <h5>Sri Sathya Sai Institute of Higher Learning</h5>
+                        <ul>
+                            <li>Led end to end store operations including cash handling, inventory budgeting, cost analysis, pricing decisions.</li>
+                            <li><b class="highlight">Improved operational efficiency</b> by redesigning billing workflow, reducing billing time by <b class="highlight">~30 seconds</b> per transaction.</li>
+                            <li><b class="highlight">Trained & supervised junior staff</b>, ensuring adherence to operational discipline and service standards.</li>
+                            <li>Collaborated with senior in <b class="highlight">developing</b> a cashless system to reduce billing time and need for cash.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="timeline-card">
-                <div class="timeline-left">
-                    <h4>Student Head of Cooperative Society Stores</h4>
-                    <p>August 2022 - Present</p>
+            <!-- ── EDUCATION ──────────────────────────────────────── -->
+            <h2 class="section-title section-title-mt"><span class="highlight">Education</span></h2>
+            <div class="resume-container">
+                <div class="timeline-card">
+                    <div class="timeline-left">
+                        <h4>Masters in Business Administration</h4>
+                        <p>2024 - 2026</p>
+                    </div>
+                    <div class="timeline-right">
+                        <h5>Sri Sathya Sai Institute of Higher Learning</h5>
+                        <p>Currently pursuing with majors in Finance and minors in Analytics.</p>
+                    </div>
                 </div>
-                <div class="timeline-right">
-                    <h5>Sri Sathya Sai Institute of Higher Learning</h5>
-                    <ul>
-                        <li>Led end to end store operations including cash handling, inventory budgeting, cost analysis, pricing decisions.</li>
-                        <li><b class="highlight">Improved operational efficiency</b> by redesigning billing workflow, reducing billing time by <b class="highlight">~30 seconds</b> per transaction.</li>
-                        <li><b class="highlight">Trained & supervised junior staff</b>, ensuring adherence to operational discipline and service standards.</li>
-                        <li>Collaborated with senior in <b class="highlight">developing</b> a cashless system to reduce billing time and need for cash.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <!-- ── EDUCATION ──────────────────────────────────────── -->
-        <h2 class="section-title section-title-mt"><span class="highlight">Education</span></h2>
-        <div class="resume-container">
-            <div class="timeline-card">
-                <div class="timeline-left">
-                    <h4>Masters in Business Administration</h4>
-                    <p>2024 - 2026</p>
-                </div>
-                <div class="timeline-right">
-                    <h5>Sri Sathya Sai Institute of Higher Learning</h5>
-                    <p>Currently pursuing with majors in Finance and minors in Analytics.</p>
+                <div class="timeline-card">
+                    <div class="timeline-left">
+                        <h4>Bachelor of Commerce (Honors)</h4>
+                        <p>2021 - 2024</p>
+                    </div>
+                    <div class="timeline-right">
+                        <h5>Sri Sathya Sai Institute of Higher Learning</h5>
+                        <p>Graduated with a focus on Accounting and Finance, with a CGPA of 7.8</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="timeline-card">
-                <div class="timeline-left">
-                    <h4>Bachelor of Commerce (Honors)</h4>
-                    <p>2021 - 2024</p>
-                </div>
-                <div class="timeline-right">
-                    <h5>Sri Sathya Sai Institute of Higher Learning</h5>
-                    <p>Graduated with a focus on Accounting and Finance, with a CGPA of 7.8</p>
-                </div>
+            <!-- ── CV DOWNLOAD ────────────────────────────────────── -->
+            <div class="cv-download-section">
+                <a href="../assets/PDF/S Adithya.pdf" target="_blank" rel="noopener noreferrer" download="S_Adithya_CV.pdf" class="btn-card btn-card-lg">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
             </div>
-        </div>
-
-        <!-- ── CV DOWNLOAD ────────────────────────────────────── -->
-        <div class="cv-download-section">
-            <a href="../assets/PDF/S Adithya.pdf" target="_blank" rel="noopener noreferrer" download="S_Adithya_CV.pdf" class="btn-card btn-card-lg">
-                <i class="fas fa-download"></i> Download CV
-            </a>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- ── FOOTER ────────────────────────────────────────────── -->
     <footer>

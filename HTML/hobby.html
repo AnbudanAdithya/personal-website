@@ -26,7 +26,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Font Awesome — loaded async to eliminate render-blocking -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
     <link rel="stylesheet" href="../css/style.css">
 
     <!-- Google tag (gtag.js) -->
@@ -44,7 +48,7 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="../index.html" class="nav-logo">
-                <img src="../images/favicon.svg" alt="Logo">
+                <img src="../images/favicon.svg" alt="Logo" width="35" height="35">
             </a>
             <ul class="nav-links">
                 <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
@@ -64,70 +68,72 @@
         </div>
     </nav>
 
-    <!-- ── HOBBIES ────────────────────────────────────────────── -->
-    <section class="page-section">
-        <h2 class="section-title">My <span class="highlight">Hobbies</span></h2>
-        <p class="page-subtitle">Here are a few things I love doing in my creative downtime.</p>
+    <main>
+        <!-- ── HOBBIES ────────────────────────────────────────────── -->
+        <section class="page-section">
+            <h2 class="section-title">My <span class="highlight">Hobbies</span></h2>
+            <p class="page-subtitle">Here are a few things I love doing in my creative downtime.</p>
 
-        <div class="cards-grid-hobby">
-            <div class="card-item hobby-category hobby-main-card" onclick="openModal('music-modal')">
-                <img src="../images/Hobby/Music-Section.png" alt="Music composition" class="card-img card-img-tall">
-                <div class="card-body card-body-centered">
-                    <h3 class="card-title card-title-lg">Music Composition</h3>
-                    <p class="card-text">Explore my original music tracks and beats created using DJ Loop Pads and BandLab.</p>
-                    <button type="button" class="btn-card btn-card-centered">
-                        <i class="fas fa-play-circle"></i> View Tracks
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- ── MUSIC MODAL ────────────────────────────────────── -->
-        <div id="music-modal" class="modal">
-            <div class="modal-content">
-                <button class="close-btn" onclick="closeModal('music-modal')" aria-label="Close modal" type="button">&times;</button>
-                <h2 class="modal-title">Music Compositions</h2>
-
-                <div class="modal-audio-list">
-                    <div class="audio-item">
-                        <h4>Music Track - 1</h4>
-                        <p>Hear my first ever music composition created using DJ Loop Pads.</p>
-                        <audio controls><source src="../assets/Hobby/Music_1.mp3" type="audio/mpeg"></audio>
-                    </div>
-                    <div class="audio-item">
-                        <h4>Music Track - 2</h4>
-                        <p>My second music composition created using DJ Loop Pads.</p>
-                        <audio controls><source src="../assets/Hobby/Music_2.mp3" type="audio/mpeg"></audio>
-                    </div>
-                    <div class="audio-item">
-                        <h4>Music Track - 3</h4>
-                        <p>Third music composition created using DJ Loop Pads.</p>
-                        <audio controls><source src="../assets/Hobby/Music_3.mp3" type="audio/mpeg"></audio>
-                    </div>
-                    <div class="audio-item">
-                        <h4>Music Track - 4</h4>
-                        <p>I created this using BandLab loop pads feature - I hope this gives a hero BGM vibe.</p>
-                        <audio controls><source src="../assets/Hobby/Music_4.mp3" type="audio/mpeg"></audio>
-                    </div>
-                    <div class="audio-item">
-                        <h4>Music Track - 5</h4>
-                        <p>I created this music composition using BandLab - You might find this familiar.</p>
-                        <audio controls><source src="../assets/Hobby/Music_5.mp3" type="audio/mpeg"></audio>
-                    </div>
-                    <div class="audio-item">
-                        <h4>Music Track - 6</h4>
-                        <p>Yet another masterpiece!</p>
-                        <audio controls><source src="../assets/Hobby/Music_6.mp3" type="audio/mpeg"></audio>
-                    </div>
-                    <div class="audio-item">
-                        <h4>Music Track - 7</h4>
-                        <p>Listen to this exclusive music piece!</p>
-                        <audio controls><source src="../assets/Hobby/Music_7.mp3" type="audio/mpeg"></audio>
+            <div class="cards-grid-hobby">
+                <div class="card-item hobby-category hobby-main-card" onclick="openModal('music-modal')">
+                    <img src="../images/Hobby/Music-Section.png" alt="Music composition" class="card-img card-img-tall">
+                    <div class="card-body card-body-centered">
+                        <h3 class="card-title card-title-lg">Music Composition</h3>
+                        <p class="card-text">Explore my original music tracks and beats created using DJ Loop Pads and BandLab.</p>
+                        <button type="button" class="btn-card btn-card-centered">
+                            <i class="fas fa-play-circle"></i> View Tracks
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+
+            <!-- ── MUSIC MODAL ────────────────────────────────────── -->
+            <div id="music-modal" class="modal">
+                <div class="modal-content">
+                    <button class="close-btn" onclick="closeModal('music-modal')" aria-label="Close modal" type="button">&times;</button>
+                    <h2 class="modal-title">Music Compositions</h2>
+
+                    <div class="modal-audio-list">
+                        <div class="audio-item">
+                            <h4>Music Track - 1</h4>
+                            <p>Hear my first ever music composition created using DJ Loop Pads.</p>
+                            <audio controls><source src="../assets/Hobby/Music_1.mp3" type="audio/mpeg"></audio>
+                        </div>
+                        <div class="audio-item">
+                            <h4>Music Track - 2</h4>
+                            <p>My second music composition created using DJ Loop Pads.</p>
+                            <audio controls><source src="../assets/Hobby/Music_2.mp3" type="audio/mpeg"></audio>
+                        </div>
+                        <div class="audio-item">
+                            <h4>Music Track - 3</h4>
+                            <p>Third music composition created using DJ Loop Pads.</p>
+                            <audio controls><source src="../assets/Hobby/Music_3.mp3" type="audio/mpeg"></audio>
+                        </div>
+                        <div class="audio-item">
+                            <h4>Music Track - 4</h4>
+                            <p>I created this using BandLab loop pads feature - I hope this gives a hero BGM vibe.</p>
+                            <audio controls><source src="../assets/Hobby/Music_4.mp3" type="audio/mpeg"></audio>
+                        </div>
+                        <div class="audio-item">
+                            <h4>Music Track - 5</h4>
+                            <p>I created this music composition using BandLab - You might find this familiar.</p>
+                            <audio controls><source src="../assets/Hobby/Music_5.mp3" type="audio/mpeg"></audio>
+                        </div>
+                        <div class="audio-item">
+                            <h4>Music Track - 6</h4>
+                            <p>Yet another masterpiece!</p>
+                            <audio controls><source src="../assets/Hobby/Music_6.mp3" type="audio/mpeg"></audio>
+                        </div>
+                        <div class="audio-item">
+                            <h4>Music Track - 7</h4>
+                            <p>Listen to this exclusive music piece!</p>
+                            <audio controls><source src="../assets/Hobby/Music_7.mp3" type="audio/mpeg"></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- ── FOOTER ────────────────────────────────────────────── -->
     <footer>
