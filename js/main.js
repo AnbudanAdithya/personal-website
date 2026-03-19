@@ -271,3 +271,115 @@ if (document.readyState === 'loading') {
     initCursor()
 }
 
+// ═══════════════════════════════════════════════════════════════
+// EFFECTS — Append to END of js/main.js on BOTH sites
+// Options: 1 scroll reveal, 2 page load entrance,
+//          4 gradient pulse, 8 scroll progress bar
+// (Option 5 grain texture is CSS-only — no JS needed)
+// ═══════════════════════════════════════════════════════════════
+
+
+// ── 8. SCROLL PROGRESS BAR ────────────────────────────────────
+function initScrollProgress() {
+    const bar = document.createElement('div')
+    bar.id = 'scroll-progress'
+    document.body.prepend(bar)
+
+    window.addEventListener('scroll', () => {
+        const total = document.documentElement.scrollHeight - window.innerHeight
+        bar.style.width = (total > 0 ? (window.scrollY / total) * 100 : 0) + '%'
+    }, { passive: true })
+}
+
+
+// ── 1. SCROLL REVEAL ──────────────────────────────────────────
+function initScrollReveal() {
+    const singleTargets = [
+        '.section-header', '.section-title', '.page-subtitle',
+        '.about-content', '.intro-text', '.intro-avatar',
+        '.quote-box', '.model-hero-content',
+        '.cv-download-section', '.filter-pills',
+        '.about-content h2', '.about-content p',
+        '.hero-sub', '.social-section h2', '.social-section p'
+    ]
+
+    const staggerTargets = [
+        '.cards-grid', '.projects-grid', '.resume-container',
+        '.skills-grid', '.home-tech-grid', '.social-links',
+        '.hero-stats', '.hero-buttons', '.modal-audio-list'
+    ]
+
+    singleTargets.forEach(sel => {
+        document.querySelectorAll(sel).forEach(el => {
+            if (!el.closest('.reveal-stagger')) el.classList.add('reveal')
+        })
+    })
+
+    staggerTargets.forEach(sel => {
+        document.querySelectorAll(sel).forEach(el => {
+            el.classList.add('reveal-stagger')
+        })
+    })
+
+    // Individual cards not inside a stagger group
+    document.querySelectorAll('.timeline-card, .stat-card, .skill-tag, .audio-item').forEach(el => {
+        if (!el.closest('.reveal-stagger')) el.classList.add('reveal')
+    })
+
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed')
+                io.unobserve(entry.target)
+            }
+        })
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' })
+
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el))
+}
+
+
+// ── 2. PAGE LOAD ENTRANCE ─────────────────────────────────────
+function initHeroEntrance() {
+    const sequence = [
+        ['.hero-tag',                          'fx-load fx-d1'],
+        ['.hero h1',                           'fx-load fx-d2'],
+        ['.typewriter-wrapper, .hero-sub',     'fx-load fx-d3'],
+        ['.hero-buttons',                      'fx-load fx-d4'],
+        ['.hero-image, .hero-stats',           'fx-load-pop fx-d5'],
+        ['.model-hero-content',                'fx-load fx-d2'],
+    ]
+
+    sequence.forEach(([selectors, classes]) => {
+        const el = document.querySelector(selectors)
+        if (el) classes.split(' ').forEach(c => el.classList.add(c))
+    })
+}
+
+
+// ── 4. GRADIENT PULSE ─────────────────────────────────────────
+function initGradientPulse() {
+    const hero = document.querySelector('.hero-wrapper') || document.querySelector('.hero')
+    if (!hero) return
+    const overlay = document.createElement('div')
+    overlay.className = 'hero-pulse-overlay'
+    hero.insertBefore(overlay, hero.firstChild)
+}
+
+
+// ── INIT ALL ──────────────────────────────────────────────────
+;(function initEffects() {
+    initScrollProgress()
+
+    const run = () => {
+        initHeroEntrance()
+        initGradientPulse()
+        initScrollReveal()
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', run)
+    } else {
+        run()
+    }
+})()

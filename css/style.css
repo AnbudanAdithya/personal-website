@@ -761,3 +761,136 @@ a:focus-visible, button:focus-visible {
     .cursor-dot,
     .cursor-ring { display: none !important; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   EFFECTS — Append to END of css/style.css on BOTH sites
+   Options: 1 scroll reveal, 2 page load, 4 gradient pulse,
+            5 grain texture, 8 scroll progress bar
+   ═══════════════════════════════════════════════════════════════ */
+
+
+/* ── 8. SCROLL PROGRESS BAR ───────────────────────────────────
+   Gold line at top that fills as you scroll                    */
+#scroll-progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2.5px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--accent), #fff8c0, var(--accent));
+    z-index: 9999;
+    pointer-events: none;
+    box-shadow: 0 0 8px rgba(240, 192, 64, 0.6);
+    transition: width 0.06s linear;
+}
+
+
+/* ── 5. GRAIN TEXTURE ─────────────────────────────────────────
+   Subtle film grain over the entire page — CSS only            */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9990;
+    opacity: 0.028;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-size: 180px 180px;
+    mix-blend-mode: overlay;
+}
+
+
+/* ── 1. SCROLL REVEAL ─────────────────────────────────────────
+   Elements start invisible; .revealed is added by JS          */
+.reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition:
+        opacity   0.65s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.from-left  { transform: translateX(-36px); }
+.reveal.from-right { transform: translateX(36px); }
+.reveal.revealed   { opacity: 1; transform: translate(0, 0); }
+
+/* Stagger grid children */
+.reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(26px);
+    transition:
+        opacity   0.55s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-stagger.revealed > *:nth-child(1)  { transition-delay: 0.00s; }
+.reveal-stagger.revealed > *:nth-child(2)  { transition-delay: 0.07s; }
+.reveal-stagger.revealed > *:nth-child(3)  { transition-delay: 0.14s; }
+.reveal-stagger.revealed > *:nth-child(4)  { transition-delay: 0.21s; }
+.reveal-stagger.revealed > *:nth-child(5)  { transition-delay: 0.28s; }
+.reveal-stagger.revealed > *:nth-child(6)  { transition-delay: 0.35s; }
+.reveal-stagger.revealed > *:nth-child(7)  { transition-delay: 0.42s; }
+.reveal-stagger.revealed > *:nth-child(8)  { transition-delay: 0.49s; }
+.reveal-stagger.revealed > *:nth-child(9)  { transition-delay: 0.56s; }
+.reveal-stagger.revealed > *:nth-child(10) { transition-delay: 0.63s; }
+
+.reveal-stagger.revealed > * { opacity: 1; transform: translateY(0); }
+
+
+/* ── 2. PAGE LOAD ENTRANCE ────────────────────────────────────
+   Hero elements stagger in on first load                       */
+@keyframes fx-rise {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fx-pop {
+    0%   { opacity: 0; transform: scale(0.88); }
+    70%  { transform: scale(1.03); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.fx-load {
+    opacity: 0;
+    animation: fx-rise 0.72s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.fx-load-pop {
+    opacity: 0;
+    animation: fx-pop 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.fx-d1 { animation-delay: 0.08s; }
+.fx-d2 { animation-delay: 0.20s; }
+.fx-d3 { animation-delay: 0.32s; }
+.fx-d4 { animation-delay: 0.44s; }
+.fx-d5 { animation-delay: 0.56s; }
+.fx-d6 { animation-delay: 0.68s; }
+
+
+/* ── 4. GRADIENT PULSE ────────────────────────────────────────
+   Breathing gold glow overlay behind hero content             */
+.hero-pulse-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background: radial-gradient(ellipse at 50% 30%, rgba(240,192,64,0.07) 0%, transparent 65%);
+    animation: pulse-breathe 6s ease-in-out infinite;
+}
+
+@keyframes pulse-breathe {
+    0%, 100% { opacity: 0.45; transform: scale(1); }
+    50%       { opacity: 1;   transform: scale(1.10); }
+}
+
+/* Hero children sit above overlay */
+.hero > *,
+.hero-wrapper .hero > * { position: relative; z-index: 1; }
+.hero, .hero-wrapper    { position: relative; overflow: hidden; }
+
+
+/* ── MOBILE ───────────────────────────────────────────────────
+   Tone down on small screens                                   */
+@media (max-width: 768px) {
+    .hero-pulse-overlay { animation: none; opacity: 0.3; }
+}
