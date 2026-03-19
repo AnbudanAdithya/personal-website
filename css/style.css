@@ -761,16 +761,15 @@ a:focus-visible, button:focus-visible {
     .cursor-dot,
     .cursor-ring { display: none !important; }
 }
-
 /* ═══════════════════════════════════════════════════════════════
    EFFECTS — Append to END of css/style.css on BOTH sites
-   Options: 1 scroll reveal, 2 page load, 4 gradient pulse,
+   Options: 1 scroll reveal, 2 page load entrance,
             5 grain texture, 8 scroll progress bar
    ═══════════════════════════════════════════════════════════════ */
 
 
 /* ── 8. SCROLL PROGRESS BAR ───────────────────────────────────
-   Gold line at top that fills as you scroll                    */
+   Gold line at top that fills as you scroll down               */
 #scroll-progress {
     position: fixed;
     top: 0; left: 0;
@@ -785,7 +784,7 @@ a:focus-visible, button:focus-visible {
 
 
 /* ── 5. GRAIN TEXTURE ─────────────────────────────────────────
-   Subtle film grain over the entire page — CSS only            */
+   Subtle film grain over the entire page — no JS needed        */
 body::after {
     content: '';
     position: fixed;
@@ -800,7 +799,7 @@ body::after {
 
 
 /* ── 1. SCROLL REVEAL ─────────────────────────────────────────
-   Elements start invisible; .revealed is added by JS          */
+   Elements start invisible; JS adds .revealed when in view     */
 .reveal {
     opacity: 0;
     transform: translateY(32px);
@@ -865,32 +864,3 @@ body::after {
 .fx-d4 { animation-delay: 0.44s; }
 .fx-d5 { animation-delay: 0.56s; }
 .fx-d6 { animation-delay: 0.68s; }
-
-
-/* ── 4. GRADIENT PULSE ────────────────────────────────────────
-   Breathing gold glow overlay behind hero content             */
-.hero-pulse-overlay {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    background: radial-gradient(ellipse at 50% 30%, rgba(240,192,64,0.07) 0%, transparent 65%);
-    animation: pulse-breathe 6s ease-in-out infinite;
-}
-
-@keyframes pulse-breathe {
-    0%, 100% { opacity: 0.45; transform: scale(1); }
-    50%       { opacity: 1;   transform: scale(1.10); }
-}
-
-/* Hero children sit above overlay */
-.hero > *,
-.hero-wrapper .hero > * { position: relative; z-index: 1; }
-.hero, .hero-wrapper    { position: relative; overflow: hidden; }
-
-
-/* ── MOBILE ───────────────────────────────────────────────────
-   Tone down on small screens                                   */
-@media (max-width: 768px) {
-    .hero-pulse-overlay { animation: none; opacity: 0.3; }
-}

@@ -274,7 +274,7 @@ if (document.readyState === 'loading') {
 // ═══════════════════════════════════════════════════════════════
 // EFFECTS — Append to END of js/main.js on BOTH sites
 // Options: 1 scroll reveal, 2 page load entrance,
-//          4 gradient pulse, 8 scroll progress bar
+//          8 scroll progress bar
 // (Option 5 grain texture is CSS-only — no JS needed)
 // ═══════════════════════════════════════════════════════════════
 
@@ -321,7 +321,6 @@ function initScrollReveal() {
         })
     })
 
-    // Individual cards not inside a stagger group
     document.querySelectorAll('.timeline-card, .stat-card, .skill-tag, .audio-item').forEach(el => {
         if (!el.closest('.reveal-stagger')) el.classList.add('reveal')
     })
@@ -342,12 +341,12 @@ function initScrollReveal() {
 // ── 2. PAGE LOAD ENTRANCE ─────────────────────────────────────
 function initHeroEntrance() {
     const sequence = [
-        ['.hero-tag',                          'fx-load fx-d1'],
-        ['.hero h1',                           'fx-load fx-d2'],
-        ['.typewriter-wrapper, .hero-sub',     'fx-load fx-d3'],
-        ['.hero-buttons',                      'fx-load fx-d4'],
-        ['.hero-image, .hero-stats',           'fx-load-pop fx-d5'],
-        ['.model-hero-content',                'fx-load fx-d2'],
+        ['.hero-tag',                      'fx-load fx-d1'],
+        ['.hero h1',                       'fx-load fx-d2'],
+        ['.typewriter-wrapper, .hero-sub', 'fx-load fx-d3'],
+        ['.hero-buttons',                  'fx-load fx-d4'],
+        ['.hero-image, .hero-stats',       'fx-load-pop fx-d5'],
+        ['.model-hero-content',            'fx-load fx-d2'],
     ]
 
     sequence.forEach(([selectors, classes]) => {
@@ -357,23 +356,12 @@ function initHeroEntrance() {
 }
 
 
-// ── 4. GRADIENT PULSE ─────────────────────────────────────────
-function initGradientPulse() {
-    const hero = document.querySelector('.hero-wrapper') || document.querySelector('.hero')
-    if (!hero) return
-    const overlay = document.createElement('div')
-    overlay.className = 'hero-pulse-overlay'
-    hero.insertBefore(overlay, hero.firstChild)
-}
-
-
 // ── INIT ALL ──────────────────────────────────────────────────
 ;(function initEffects() {
     initScrollProgress()
 
     const run = () => {
         initHeroEntrance()
-        initGradientPulse()
         initScrollReveal()
     }
 
