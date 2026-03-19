@@ -10,7 +10,7 @@ You can view the live website here: [[Website](https://adithya05.vercel.app/)]
 * **Dynamic Typing Effect:** A custom JavaScript typewriter effect on the hero section highlighting my core competencies.
 * **Responsive Design:** Fully mobile-responsive layout using CSS Grid and Flexbox, ensuring a seamless experience across desktop, tablet, and mobile devices.
 * **Portfolio Gateways:** A dedicated project hub that branches out into specialized domains (Finance & Analytics, Market Studies & Research).
-* **Interactive Modals:** A custom-built pop-up modal system for the Hobbies section, featuring a sleek, WebKit-styled audio player for my original music compositions.
+* **Interactive Modals:** A custom-built pop-up modal system for the Hobbies section, featuring a sleek, WebKit-styled audio player for my original music composition.
 * **Smooth Navigation:** A glassmorphism sticky navbar with scroll-detection styling.
 
 ## 📂 Site Structure
@@ -19,7 +19,6 @@ The website is composed of several dedicated pages to keep content organized and
 
 * `index.html` - **Home:** Introduction, core skills grid, and quick links to my professional socials.
 * `resume.html` - **Resume:** An interactive timeline of my professional experience and education, along with a downloadable CV.
-* `projects.html` - **Projects Gateway:** Portal links to my specialized Finance and Market Research portfolio websites.
 * `blogs.html` - **Blogs:** A collection of my recent musings and articles (linked to Substack).
 * `hobby.html` - **Hobbies:** A showcase of my creative downtime, featuring an interactive music player for my DJ/BandLab compositions.
 
@@ -48,7 +47,6 @@ git clone [https://github.com/AnbudanAdithya/Website.git](https://github.com/Anb
 
 This website is a living digital ecosystem. Future updates will include:
 
-* Integration of the **Market Research & Studies** sub-portfolio.
 * Additional audio tracks and hobby categories.
 * Expanded blog integrations and new financial models.
 * Continuous UI/UX refinements.
