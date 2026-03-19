@@ -659,3 +659,105 @@ a:focus-visible, button:focus-visible {
     font-size: 1.1rem;
     padding: 12px 24px;
 }
+
+/* ═══════════════════════════════════════════════════════════
+   CUSTOM CURSOR
+   Append this block to the END of css/style.css on both sites.
+   ═══════════════════════════════════════════════════════════ */
+
+/* Hide default cursor everywhere */
+*, *::before, *::after { cursor: none !important; }
+
+/* ── DOT — follows mouse exactly ──────────────────────────── */
+.cursor-dot {
+    position: fixed;
+    top: 0; left: 0;
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition:
+        width  0.18s ease,
+        height 0.18s ease,
+        background 0.18s ease,
+        opacity 0.25s ease;
+    will-change: transform;
+}
+
+/* ── RING — follows with spring lag (driven by JS) ─────────── */
+.cursor-ring {
+    position: fixed;
+    top: 0; left: 0;
+    width: 34px;
+    height: 34px;
+    border: 1.5px solid rgba(240, 192, 64, 0.55);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99998;
+    transform: translate(-50%, -50%);
+    transition:
+        width  0.22s ease,
+        height 0.22s ease,
+        border-color 0.22s ease,
+        background  0.22s ease,
+        opacity 0.25s ease;
+    will-change: transform;
+}
+
+/* ── HOVER STATE — over links, buttons, cards ──────────────── */
+.cursor-dot.is-hovering {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+}
+
+.cursor-ring.is-hovering {
+    width: 46px;
+    height: 46px;
+    border-color: var(--accent);
+    background: rgba(240, 192, 64, 0.06);
+}
+
+/* ── CLICK STATE ────────────────────────────────────────────── */
+.cursor-dot.is-clicking {
+    width: 5px;
+    height: 5px;
+    background: #fff;
+}
+
+.cursor-ring.is-clicking {
+    width: 22px;
+    height: 22px;
+    border-color: #fff;
+    border-width: 2.5px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* ── LINK CLICK RIPPLE ──────────────────────────────────────── */
+.cursor-ripple {
+    position: fixed;
+    top: 0; left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(240, 192, 64, 0.4);
+    pointer-events: none;
+    z-index: 99997;
+    transform: translate(-50%, -50%) scale(1);
+    animation: cursor-ripple-out 0.55s ease-out forwards;
+}
+
+@keyframes cursor-ripple-out {
+    0%   { transform: translate(-50%, -50%) scale(1);  opacity: 0.7; }
+    100% { transform: translate(-50%, -50%) scale(7);  opacity: 0; }
+}
+
+/* ── MOBILE / TOUCH — restore default ──────────────────────── */
+@media (hover: none), (pointer: coarse) {
+    *, *::before, *::after { cursor: auto !important; }
+    .cursor-dot,
+    .cursor-ring { display: none !important; }
+}
