@@ -1,0 +1,115 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="vscBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#161b22;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="globeGradient" cx="40%" cy="40%">
+      <stop offset="0%" style="stop-color:#58a6ff;stop-opacity:0.3" />
+      <stop offset="70%" style="stop-color:#1f6feb;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#0d47a1;stop-opacity:0.8" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- VS Code Dark Background -->
+  <rect width="1200" height="630" fill="url(#vscBg)"/>
+  
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="codeGrid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#30363d" stroke-width="1" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#codeGrid)"/>
+  
+  <!-- Globe base -->
+  <circle cx="300" cy="315" r="140" fill="url(#globeGradient)" filter="url(#glow)"/>
+  
+  <!-- Globe outline -->
+  <circle cx="300" cy="315" r="140" fill="none" stroke="#58a6ff" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Continents (simplified) -->
+  <ellipse cx="280" cy="290" rx="25" ry="35" fill="#1f883d" opacity="0.6"/>
+  <ellipse cx="320" cy="340" rx="30" ry="25" fill="#1f883d" opacity="0.6"/>
+  
+  <!-- Data points on globe (representing news sources) -->
+  <circle cx="295" cy="295" r="6" fill="#ff8c42" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="315" cy="320" r="6" fill="#f85149" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="290" cy="340" r="6" fill="#4ecdc4" opacity="0.8" filter="url(#glow)"/>
+  
+  <!-- Analysis layers radiating from globe -->
+  <!-- Layer 1: Editorial Opinions -->
+  <g opacity="0.85">
+    <circle cx="550" cy="150" r="80" fill="none" stroke="#d29922" stroke-width="2" stroke-dasharray="5,5" opacity="0.6"/>
+    <circle cx="550" cy="150" r="60" fill="#d29922" opacity="0.08"/>
+    <text x="550" y="155" text-anchor="middle" fill="#d29922" font-size="13" font-weight="bold">Editorial</text>
+    <text x="550" y="172" text-anchor="middle" fill="#d29922" font-size="12">Opinions</text>
+    <text x="550" y="195" text-anchor="middle" fill="#8b949e" font-size="10">425 docs</text>
+    <line x1="420" y1="280" x2="500" y2="180" stroke="#d29922" stroke-width="1.5" opacity="0.4"/>
+  </g>
+  
+  <!-- Layer 2: News Articles -->
+  <g opacity="0.85">
+    <circle cx="900" cy="150" r="80" fill="none" stroke="#58a6ff" stroke-width="2" stroke-dasharray="5,5" opacity="0.6"/>
+    <circle cx="900" cy="150" r="60" fill="#58a6ff" opacity="0.08"/>
+    <text x="900" y="155" text-anchor="middle" fill="#58a6ff" font-size="13" font-weight="bold">News</text>
+    <text x="900" y="172" text-anchor="middle" fill="#58a6ff" font-size="12">Articles</text>
+    <text x="900" y="195" text-anchor="middle" fill="#8b949e" font-size="10">1,850 docs</text>
+    <line x1="420" y1="280" x2="850" y2="180" stroke="#58a6ff" stroke-width="1.5" opacity="0.4"/>
+  </g>
+  
+  <!-- Layer 3: Social Commentary -->
+  <g opacity="0.85">
+    <circle cx="550" cy="480" r="80" fill="none" stroke="#3fb950" stroke-width="2" stroke-dasharray="5,5" opacity="0.6"/>
+    <circle cx="550" cy="480" r="60" fill="#3fb950" opacity="0.08"/>
+    <text x="550" y="485" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="bold">YouTube</text>
+    <text x="550" y="502" text-anchor="middle" fill="#3fb950" font-size="12">Comments</text>
+    <text x="550" y="525" text-anchor="middle" fill="#8b949e" font-size="10">350 docs</text>
+    <line x1="420" y1="350" x2="500" y2="420" stroke="#3fb950" stroke-width="1.5" opacity="0.4"/>
+  </g>
+  
+  <!-- Data visualization: Wave patterns representing sentiment -->
+  <g opacity="0.5">
+    <path d="M 950 400 Q 970 390 990 400 T 1050 400" fill="none" stroke="#f85149" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 950 420 Q 970 410 990 420 T 1050 420" fill="none" stroke="#1f6feb" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 950 440 Q 970 430 990 440 T 1050 440" fill="none" stroke="#d29922" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Legend for sentiment waves -->
+  <g opacity="0.7">
+    <text x="950" y="475" fill="#8b949e" font-size="11">Sentiment Variance</text>
+  </g>
+  
+  <!-- Connection lines showing relationships -->
+  <line x1="300" y1="315" x2="550" y2="150" stroke="#58a6ff" stroke-width="1" opacity="0.25" stroke-dasharray="3,3"/>
+  <line x1="300" y1="315" x2="900" y2="150" stroke="#58a6ff" stroke-width="1" opacity="0.25" stroke-dasharray="3,3"/>
+  <line x1="300" y1="315" x2="550" y2="480" stroke="#58a6ff" stroke-width="1" opacity="0.25" stroke-dasharray="3,3"/>
+  
+  <!-- Central narrative label -->
+  <text x="300" y="320" text-anchor="middle" fill="#c9d1d9" font-size="14" font-weight="bold">Global</text>
+  <text x="300" y="337" text-anchor="middle" fill="#c9d1d9" font-size="14" font-weight="bold">Conflict</text>
+  
+  <!-- Title area -->
+  <text x="50" y="50" fill="#c9d1d9" font-size="20" font-weight="600">One War</text>
+  <text x="50" y="75" fill="#58a6ff" font-size="20" font-weight="600">Six Realities</text>
+  
+  <!-- Subtitle -->
+  <text x="50" y="605" fill="#8b949e" font-size="12">NLP Analysis • Media Framing • Text Analytics</text>
+  
+  <!-- Stats display -->
+  <g opacity="0.8">
+    <rect x="1020" y="520" width="160" height="90" fill="#0d1117" stroke="#30363d" stroke-width="1.5" rx="4"/>
+    <text x="1100" y="540" text-anchor="middle" fill="#58a6ff" font-size="13" font-weight="bold">2,625</text>
+    <text x="1100" y="558" text-anchor="middle" fill="#8b949e" font-size="11">Documents</text>
+    
+    <text x="1030" y="580" fill="#8b949e" font-size="10">Analyzed across:</text>
+    <text x="1030" y="595" fill="#d29922" font-size="10">• News • Editorial • Social</text>
+  </g>
+</svg>
