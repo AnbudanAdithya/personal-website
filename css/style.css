@@ -149,6 +149,7 @@ body {
     line-height: 1.2;
     letter-spacing: -1px;
     margin-bottom: 0.5rem;
+    font-family: var(--font-serif);
 }
 
 .highlight { color: var(--accent); }
@@ -216,7 +217,11 @@ body {
 }
 
 .intro-text { flex: 1.5; }
-.intro-text h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+.intro-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-serif);
+}
 .intro-text p { color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 1rem; text-align: justify; }
 
 .intro-avatar { flex: 1; text-align: center; }
@@ -245,7 +250,10 @@ body {
 
 /* ── SOCIAL LINKS ────────────────────────────────────────── */
 .social-section { text-align: center; padding: 60px 2rem; }
-.social-section h2 { margin-bottom: 0.5rem; }
+.social-section h2 {
+    margin-bottom: 0.5rem;
+    font-family: var(--font-serif);
+}
 .social-section p { color: var(--text-secondary); margin-bottom: 2rem; }
 
 .social-links {
@@ -293,7 +301,13 @@ footer {
 /* ── PAGE SECTIONS ───────────────────────────────────────── */
 .page-section { padding: 120px 5% 60px; max-width: 1400px; margin: 0 auto; }
 
-.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; font-weight: 700; }
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    font-family: var(--font-serif);
+}
 .section-title .highlight { color: var(--accent); }
 
 .page-subtitle {
@@ -350,7 +364,13 @@ footer {
 
 .card-img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid var(--border); }
 .card-body { padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1; }
-.card-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-primary); }
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-family: var(--font-serif);
+}
 .card-text { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; text-align: justify; flex-grow: 1; }
 
 .btn-card {
@@ -398,11 +418,20 @@ footer {
 }
 
 .timeline-left { flex: 1; min-width: 250px; }
-.timeline-left h4 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+.timeline-left h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-serif);
+}
 .timeline-left p { color: var(--accent); font-style: italic; font-size: 0.9rem; }
 
 .timeline-right { flex: 2; min-width: 300px; }
-.timeline-right h5 { font-size: 1.2rem; color: var(--text-primary); margin-bottom: 1rem; }
+.timeline-right h5 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-family: var(--font-serif);
+}
 .timeline-right ul { padding-left: 1.2rem; color: var(--text-secondary); text-align: justify; }
 .timeline-right ul li { margin-bottom: 8px; }
 
@@ -443,6 +472,7 @@ audio::-webkit-media-controls-time-remaining-display {
     text-transform: uppercase;
     margin-top: 1.5rem;
     margin-bottom: 0.8rem;
+    font-family: var(--font-serif);
 }
 
 .home-tech-grid {
@@ -669,7 +699,10 @@ a:focus-visible, button:focus-visible {
 .card-body-centered { text-align: center; }
 
 /* Larger card title (hobby card) */
-.card-title-lg { font-size: 1.5rem; }
+.card-title-lg {
+    font-size: 1.5rem;
+    font-family: var(--font-serif);
+}
 
 /* Centered button inside card body */
 .btn-card-centered { margin: 0 auto; }
@@ -679,6 +712,7 @@ a:focus-visible, button:focus-visible {
     margin-bottom: 1.5rem;
     color: var(--accent);
     text-align: center;
+    font-family: var(--font-serif);
 }
 
 /* ── PROJECTS PORTAL PAGE ────────────────────────────────── */
@@ -704,6 +738,7 @@ a:focus-visible, button:focus-visible {
 .card-title-xl {
     font-size: 1.6rem;
     text-align: center;
+    font-family: var(--font-serif);
 }
 
 /* Centered card text with extra bottom margin */

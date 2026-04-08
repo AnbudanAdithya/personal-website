@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Payback Period Calculator | S Adithya</title>
+    <meta name="description" content="Calculate simple and discounted payback periods for any business investment, with fixed or uneven cash flow patterns.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="S Adithya">
+    <link rel="canonical" href="https://adithya05.vercel.app/HTML/payback.html">
+
+    <meta property="og:title" content="Payback Period Calculator | S Adithya">
+    <meta property="og:description" content="Calculate simple and discounted payback periods for any business investment with fixed or uneven cash flows.">
+    <meta property="og:url" content="https://adithya05.vercel.app/HTML/payback.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://adithya05.vercel.app/images/favicon.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Payback Period Calculator | S Adithya">
+    <meta name="twitter:description" content="Calculate simple and discounted payback periods for any business investment.">
+
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/projects.css"/>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R2SKKY57BE"></script>
+    <script src="../js/gtag-config.js"></script>
+        
+</head>
+<body>
+
+    <section class="model-hero">
+        <div class="model-hero-content">
+            <p class="hero-tag">Financial Model</p>
+            <h1>Payback Period <span class="highlight">Calculator</span></h1>
+            <p class="hero-sub">Calculate Simple & Discounted Payback Period for any business investment. Supports fixed growth and uneven cash flow patterns.</p>
+        </div>
+    </section>
+
+    <section class="calculator-section">
+        <div class="calculator-vertical">
+
+            <div class="calc-inputs-top">
+                <h3>📝 Inputs</h3>
+                <div class="inputs-grid">
+
+                    <div class="input-col">
+                        <div class="input-group">
+                            <label>Business Name</label>
+                            <input type="text" id="biz-name" placeholder="e.g. My Startup"/>
+                        </div>
+                        <div class="input-group">
+                            <label>Initial Investment (₹)</label>
+                            <input type="number" id="lump-sum-amount" placeholder="e.g. 1000000"/>
+                        </div>
+                        <div class="input-group">
+                            <label>Number of Years</label>
+                            <input type="number" id="num-years" placeholder="e.g. 5" min="1" max="20"/>
+                        </div>
+                        <div class="input-group">
+                            <label>Discount Rate (%)</label>
+                            <input type="number" id="discount-rate" placeholder="e.g. 10"/>
+                        </div>
+                        <div class="input-group">
+                            <label>Tax Rate (%)</label>
+                            <input type="number" id="tax-rate" placeholder="e.g. 25"/>
+                        </div>
+                    </div>
+
+                    <div class="input-col">
+                        <div class="input-group">
+                            <label>Cash Flow Pattern</label>
+                            <div class="toggle-group">
+                                <label class="toggle-option">
+                                    <input type="radio" name="cf-mode" value="fixed" checked onchange="onModeChange()"/>
+                                    <span>Fixed Growth Rate</span>
+                                </label>
+                                <label class="toggle-option">
+                                    <input type="radio" name="cf-mode" value="uneven" onchange="onModeChange()"/>
+                                    <span>Uneven (Year by Year)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="cf-fixed-inputs">
+                            <div class="input-group">
+                                <label>Year 1 Cash Flow (₹)</label>
+                                <input type="number" id="cf-year1" placeholder="e.g. 200000"/>
+                            </div>
+                            <div class="input-group">
+                                <label>Annual Growth Rate (%)</label>
+                                <input type="number" id="cf-growth" placeholder="e.g. 10"/>
+                            </div>
+                        </div>
+
+                        <div id="cf-uneven-note" class="cf-uneven-note">
+                            <p class="cf-uneven-text">
+                                📋 Enter Number of Years and click
+                                <strong style="color:var(--accent)">Generate Input Table</strong>
+                                to fill in each year's cash flow.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="calc-actions">
+                <button class="btn-secondary" id="btn-generate" onclick="generateInputTable()">
+                    Generate Input Table ↓
+                </button>
+                <button class="btn-primary" id="btn-calculate" onclick="runCalculator()" style="display:none;">
+                    Calculate ▶
+                </button>
+            </div>
+
+            <div id="dynamic-table"></div>
+            <div class="calc-results-full" id="calc-results" style="display:none;"></div>
+            <div class="chart-wrapper" id="chart-wrapper" style="display:none;">
+                <canvas id="payback-chart"></canvas>
+            </div>
+
+        </div>
+    </section>
+
+    <button id="scroll-top" aria-label="Back to top" type="button">↑</button>
+    <script src="../js/projects.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/payback.js"></script>
+</body>
+</html>

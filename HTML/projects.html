@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S Adithya | Projects</title>
+    <meta name="description" content="Financial models, equity research, analytics dashboards, and strategy projects by S Adithya.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="S Adithya">
+    <link rel="canonical" href="https://adithya05.vercel.app/HTML/projects.html">
+
+    <meta property="og:title" content="S Adithya | Projects">
+    <meta property="og:description" content="A unified showcase of financial models, equity research, analytics projects, and academic studies by S Adithya.">
+    <meta property="og:url" content="https://adithya05.vercel.app/HTML/projects.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://adithya05.vercel.app/images/favicon.svg">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="S Adithya | Projects">
+    <meta name="twitter:description" content="Financial models, analytics dashboards, research projects, and strategy studies by S Adithya.">
+
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/projects.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R2SKKY57BE"></script>
+    <script src="../js/gtag-config.js"></script>
+</head>
+<body>
+
+    <main class="projects-page">
+        <section class="projects-hero">
+            <div class="projects-hero-layout">
+                <div class="projects-hero-copy">
+                    <p class="hero-tag">Project Portfolio</p>
+                    <h1>Models, Research<br><span class="highlight">&amp; Analytics</span></h1>
+                    <p class="hero-sub">A dedicated space for my finance, analytics, market research, and machine learning work, all kept inside the main website.</p>
+                    <div class="hero-buttons">
+                        <a href="#models" class="btn-primary">View Models</a>
+                        <a href="#research" class="btn-secondary">View Research</a>
+                    </div>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <h3 id="stat-projects">0</h3>
+                        <p>Total Projects</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="stat-completed">0</h3>
+                        <p>Completed</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="stat-tools">0</h3>
+                        <p>Tools Used</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="models" class="projects-page-section projects-surface">
+            <div class="section-shell">
+                <div class="section-header">
+                    <p class="section-tag">Interactive Tools</p>
+                    <h2>Financial Models</h2>
+                    <p class="section-sub">Interactive applications built around real-world assumptions, practical finance decisions, and analytical thinking.</p>
+                </div>
+                <div class="projects-grid" id="models-grid"></div>
+            </div>
+        </section>
+
+        <section id="research" class="projects-page-section projects-plain">
+            <div class="section-shell">
+                <div class="section-header">
+                    <p class="section-tag">Research &amp; Studies</p>
+                    <h2>Equity, Strategy &amp; Analytics</h2>
+                    <p class="section-sub">A mix of equity research, market studies, business analytics, and machine learning projects completed during my academic journey.</p>
+                </div>
+
+                <div class="filter-pills" id="research-filters">
+                    <button class="filter-pill active" type="button" data-filter="all">All</button>
+                    <button class="filter-pill" type="button" data-filter="equity">Equity &amp; Finance</button>
+                    <button class="filter-pill" type="button" data-filter="strategy">Strategy &amp; Market Research</button>
+                    <button class="filter-pill" type="button" data-filter="analytics">Data Analytics &amp; Modelling</button>
+                </div>
+
+                <div class="projects-grid" id="research-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <button id="scroll-top" aria-label="Back to top" type="button"><i class="fas fa-arrow-up"></i></button>
+    <script src="../js/projects.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 // ── NAVBAR SCROLL EFFECT ──────────────────────────────────────
 function initNavbar() {
     const navbar = document.getElementById('navbar');
+    if (!navbar) return;
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.4)';

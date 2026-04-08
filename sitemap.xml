@@ -3,30 +3,114 @@
 
     <url>
         <loc>https://adithya05.vercel.app/</loc>
-        <lastmod>2026-01-01</lastmod>
+        <lastmod>2026-04-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
+        <loc>https://adithya05.vercel.app/HTML/projects.html</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
         <loc>https://adithya05.vercel.app/HTML/resume.html</loc>
-        <lastmod>2026-01-01</lastmod>
+        <lastmod>2026-04-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
+
     <url>
         <loc>https://adithya05.vercel.app/HTML/blogs.html</loc>
-        <lastmod>2026-01-01</lastmod>
+        <lastmod>2026-04-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://adithya05.vercel.app/HTML/hobby.html</loc>
-        <lastmod>2026-01-01</lastmod>
+        <lastmod>2026-04-08</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://adithya05.vercel.app/HTML/payback.html</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://adithya05.vercel.app/HTML/ML-classification.html</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://adithya05.vercel.app/HTML/iran-israel-media.html</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://adithya05.vercel.app/HTML/cybersecurity-threat-dashboard.html</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://adithya05.vercel.app/HTML/bike-analytics.html</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://adithya05.vercel.app/HTML/apollo.html</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://adithya05.vercel.app/HTML/tata-motors.html</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://adithya05.vercel.app/HTML/BMC.html</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://adithya05.vercel.app/HTML/product-study.html</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://adithya05.vercel.app/HTML/fintech-report.html</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://adithya05.vercel.app/HTML/book-review.html</loc>
+        <lastmod>2026-04-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
 
 </urlset>
