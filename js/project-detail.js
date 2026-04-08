@@ -11,6 +11,8 @@
         </svg>
     `;
 
+    const DOCUMENT_ICON = '<span aria-hidden="true">&#128196;</span>';
+
     function renderMetaItem(item) {
         const valueMarkup = item.tone === 'success'
             ? `<div class="meta-value" style="color:var(--success);">&#9679; ${item.value}</div>`
@@ -26,8 +28,17 @@
 
     function renderLink(link) {
         const isKaggle = link.variant === 'kaggle';
-        const buttonClass = isKaggle ? 'btn-kaggle' : 'btn-github';
-        const icon = isKaggle ? KAGGLE_ICON : GITHUB_ICON;
+        const isDocument = link.variant === 'document';
+        const buttonClass = isDocument
+            ? 'btn-secondary'
+            : isKaggle
+                ? 'btn-kaggle'
+                : 'btn-github';
+        const icon = isDocument
+            ? DOCUMENT_ICON
+            : isKaggle
+                ? KAGGLE_ICON
+                : GITHUB_ICON;
 
         return `
             <a href="${link.href}" target="_blank" rel="noopener noreferrer" class="${buttonClass}">

@@ -703,7 +703,8 @@
 }
 
 .ba-cta-actions .btn-github,
-.ba-cta-actions .btn-kaggle {
+.ba-cta-actions .btn-kaggle,
+.ba-cta-actions .btn-secondary {
     min-width: 220px;
 }
 
@@ -796,7 +797,8 @@
     }
 
     .btn-github,
-    .btn-kaggle {
+    .btn-kaggle,
+    .ba-cta-actions .btn-secondary {
         width: 100%;
     }
 

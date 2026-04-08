@@ -5,7 +5,7 @@
         'ml-classification': {
             template: 'project',
             card: {
-                icon: '&#127925;',
+                icon: '🎵',
                 title: 'Spotify Tracks Popularity Classification',
                 description: 'A machine learning model that classifies Spotify tracks into popularity tiers using audio features and metadata.',
                 tools: ['Python', 'Scikit-learn'],
@@ -35,7 +35,7 @@
                 { label: 'Status', value: 'Completed', tone: 'success' },
             ],
             detailTags: ['Python', 'Scikit-learn', 'Random Forest', 'Machine Learning', 'Data Preprocessing', 'Model Evaluation'],
-            insightsIcon: '&#127925;',
+            insightsIcon: '🎵',
             insightsTitle: 'Model Performance &amp; Key Findings',
             insights: [
                 {
@@ -73,7 +73,7 @@
         'iran-israel-media': {
             template: 'project',
             card: {
-                icon: '&#128221;',
+                icon: '📝',
                 title: 'Global Media Framing Analysis - Iran Israel War',
                 description: 'Cross-layer analysis of global sentiment across media channels, editorial opinions, and public opinion on the Iran-Israel war.',
                 tools: ['Python', 'Google Cloud API'],
@@ -103,7 +103,7 @@
                 { label: 'Status', value: 'Completed', tone: 'success' },
             ],
             detailTags: ['Python', 'Web Scraping', 'Visualizations', 'Global Peace', 'NLP', 'Text Analytics'],
-            insightsIcon: '&#128269;',
+            insightsIcon: '🔍',
             insightsTitle: 'Key Analytical Areas',
             insights: [
                 {
@@ -132,7 +132,7 @@
         'cybersecurity-threat-dashboard': {
             template: 'project',
             card: {
-                icon: '&#127760;',
+                icon: '🌐',
                 title: 'Global Cybersecurity Threat Dashboard',
                 description: 'Interactive Power BI dashboard analyzing and visualizing global cybersecurity threats across countries and industries.',
                 tools: ['Power BI'],
@@ -162,7 +162,7 @@
                 { label: 'Status', value: 'Completed', tone: 'success' },
             ],
             detailTags: ['Power BI', 'Data Visualization', 'Cybersecurity', 'Risk Analytics', 'Business Intelligence', 'Strategic Analysis'],
-            insightsIcon: '&#128269;',
+            insightsIcon: '🔍',
             insightsTitle: 'Key Analytical Insights',
             insights: [
                 {
@@ -191,7 +191,7 @@
         'bike-analytics': {
             template: 'project',
             card: {
-                icon: '&#128200;',
+                icon: '📈',
                 title: 'Business Analytics Dashboard',
                 description: 'An interactive business analytics dashboard built with R and Power BI to identify the drivers of bike purchase decisions.',
                 tools: ['R', 'Power BI'],
@@ -219,7 +219,7 @@
                 { label: 'Status', value: 'Completed', tone: 'success' },
             ],
             detailTags: ['R Script', 'Logistic Regression', 'Power BI', 'Data Analytics', 'Business Intelligence', 'Data Cleaning'],
-            insightsIcon: '&#128269;',
+            insightsIcon: '🔍',
             insightsTitle: 'Key Analytical Areas',
             insights: [
                 {
@@ -254,10 +254,72 @@
                 },
             ],
         },
+        'mba-dissertation-f-score': {
+            template: 'project',
+            card: {
+                icon: '📚',
+                title: 'MBA Dissertation - Piotroski F-Score',
+                description: 'MBA dissertation examining whether Piotroski\'s F-Score works in India\'s NSE 100 and whether a graduated A-Score improves investor returns.',
+                tools: ['Excel', 'Capitaline'],
+                tags: ['Piotroski F-Score', 'Value Investing', 'NSE 100'],
+                status: 'Completed',
+                year: '2026',
+                category: 'equity',
+            },
+            seoTitle: 'MBA Dissertation - Piotroski F-Score | S Adithya',
+            description: 'MBA dissertation testing Piotroski\'s F-Score in India\'s NSE 100 and comparing it against a graduated A-Score extension.',
+            heroTag: 'MBA Dissertation',
+            heroTitle: 'Beyond Binary: <span class="highlight">Piotroski F-Score</span>',
+            heroSub: 'An MBA dissertation testing whether Piotroski\'s original F-Score outperforms a graduated A-Score framework within India\'s NSE 100 value universe.',
+            overviewParagraphs: [
+                'This dissertation studies whether Piotroski\'s F-Score can reliably separate financially strong value stocks from weak ones in India\'s NSE 100 universe. It also tests a modified A-Score framework that assigns graduated weights to the original nine signals instead of using a pure binary system.',
+                'The research covers <strong style="color:var(--text-primary)">189 unique NSE 100 companies</strong> across a <strong style="color:var(--text-primary)">12-year sample from July 2013 to June 2025</strong>. Each year, the top 30% of stocks by book-to-market ratio are identified as value stocks, and both models are tested on the same sample.',
+                'The key conclusion is clear: the original binary F-Score remains the more reliable strategy in this universe. The long-only strong portfolio materially outperforms the NIFTY 100 benchmark, while the more complex A-Score fails to produce better strong-weak separation.',
+            ],
+            meta: [
+                { label: 'Study Universe', value: 'NSE 100 Value Stocks' },
+                { label: 'Sample Period', value: 'July 2013 - June 2025' },
+                { label: 'Coverage', value: '189 Companies | 1,049 Firm-Years' },
+                { label: 'Models Tested', value: 'F-Score and A-Score' },
+                { label: 'Tools', value: 'Excel + Capitaline' },
+                { label: 'Year', value: '2026' },
+                { label: 'Status', value: 'Completed', tone: 'success' },
+            ],
+            detailTags: ['MBA Dissertation', 'Piotroski F-Score', 'Value Investing', 'NSE 100', 'Fundamental Analysis', 'Indian Equity Market'],
+            insightsIcon: '📊',
+            insightsTitle: 'Key Statistical Highlights',
+            insights: [
+                {
+                    title: 'Full Sample Performance',
+                    body: 'The original <strong style="color: var(--accent);">F-Score strong portfolio returned 25.18%</strong> annually versus a <strong style="color: var(--accent);">14.63% NIFTY 100 benchmark</strong>, with statistical significance at <strong style="color: var(--accent);">p = 0.029</strong>.',
+                },
+                {
+                    title: 'Non-Financial Subsample',
+                    body: 'After excluding financial firms, the strong portfolio return improved to <strong style="color: var(--accent);">29.29%</strong> with <strong style="color: var(--accent);">p = 0.044</strong>, while the strong-weak spread widened to <strong style="color: var(--accent);">14.77%</strong>.',
+                },
+                {
+                    title: 'A-Score Did Not Win',
+                    body: 'The graduated A-Score failed to outperform the original model. In the full sample, its strong-weak spread was only <strong style="color: var(--accent);">0.09%</strong>, and the study ultimately <strong style="color: var(--accent);">rejected H2</strong>.',
+                },
+                {
+                    title: 'Practical Takeaway',
+                    body: 'For NSE 100 investors, the dissertation recommends focusing on <strong style="color: var(--accent);">F-Score &ge; 7</strong>, which delivered roughly <strong style="color: var(--accent);">10% to 15% annual outperformance</strong> over the benchmark on average.',
+                },
+            ],
+            ctaTitle: 'Full Dissertation PDF',
+            ctaText: 'The complete dissertation can be opened directly in a new tab as a PDF. It includes the full methodology, hypothesis testing, portfolio construction framework, and all supporting tables.',
+            links: [
+                {
+                    variant: 'document',
+                    label: 'Open Dissertation PDF',
+                    href: '../assets/PDF/MBA%20Dissertation_F-Score.pdf',
+                },
+            ],
+        },
         apollo: {
             template: 'report',
             card: {
-                icon: '&#127973;',
+                icon: '🏥',
                 title: 'Apollo Hospitals Equity Research',
                 description: 'A fundamental analysis report covering industry positioning, financial ratios, valuation, and an investment recommendation.',
                 tools: [],
@@ -278,7 +340,7 @@
         'tata-motors': {
             template: 'report',
             card: {
-                icon: '&#128663;',
+                icon: '🚗',
                 title: 'Tata Motors Financial Analysis',
                 description: 'A comprehensive evaluation of Tata Motors through financial statements, cash flow trends, and ratio analysis.',
                 tools: [],
@@ -299,7 +361,7 @@
         bmc: {
             template: 'report',
             card: {
-                icon: '&#128138;',
+                icon: '💊',
                 title: 'Pfizer: Value Chain &amp; BMC',
                 description: 'A strategic analysis of Pfizer using Porter\'s Value Chain Analysis and the Business Model Canvas framework.',
                 tools: [],
@@ -320,7 +382,7 @@
         'product-study': {
             template: 'report',
             card: {
-                icon: '&#127919;',
+                icon: '🎯',
                 title: 'Product Idea Market Study',
                 description: 'An in-depth market research study evaluating feasibility, target demographics, and the competitive landscape for a new concept.',
                 tools: [],
@@ -341,7 +403,7 @@
         'fintech-report': {
             template: 'report',
             card: {
-                icon: '&#128241;',
+                icon: '📱',
                 title: 'FinTech Banks Report',
                 description: 'A research report analysing the rise of FinTech banks, their operating models, and their disruption of traditional banking.',
                 tools: [],
@@ -362,7 +424,7 @@
         'book-review': {
             template: 'report',
             card: {
-                icon: '&#128214;',
+                icon: '📖',
                 title: 'Book Review',
                 description: 'A critical review of The Psychology of Money exploring foundational principles of personal finance and behavioural investing.',
                 tools: [],
@@ -392,7 +454,7 @@
 
     const projectModels = [
         {
-            icon: '&#128202;',
+            icon: '📊',
             title: 'Portfolio Optimization Model',
             description: 'Built using Modern Portfolio Theory to estimate efficient portfolios, risk-return trade-offs, and allocation decisions.',
             tools: ['Python', 'NumPy'],
@@ -402,7 +464,7 @@
             link: null,
         },
         {
-            icon: '&#128176;',
+            icon: '💰',
             title: 'Payback Period Calculator',
             description: 'Interactive model to calculate simple and discounted payback periods with fixed-growth and uneven cash flow patterns.',
             tools: ['Excel', 'VBA'],
@@ -414,20 +476,10 @@
     ];
 
     const projectResearch = [
+        toResearchCard('mba-dissertation-f-score'),
         toResearchCard('ml-classification'),
         toResearchCard('iran-israel-media'),
         toResearchCard('cybersecurity-threat-dashboard'),
-        {
-            icon: '&#128218;',
-            title: 'MBA Dissertation - Piotroski F-Score',
-            description: 'An exploratory quantitative study on Piotroski F-Score and a proposed modification aimed at improving investor returns.',
-            tools: ['Excel', 'Capitaline'],
-            tags: ['Financial Analysis', 'Valuation Research'],
-            status: 'Coming Soon',
-            year: '2026',
-            link: null,
-            category: 'equity',
-        },
         toResearchCard('bike-analytics'),
         toResearchCard('apollo'),
         toResearchCard('tata-motors'),
