@@ -49,9 +49,39 @@ function erase() {
     }
 }
 
+// ── SCROLL ANIMATIONS ──────────────────────────────────────────
+function initScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                if (entry.target.classList.contains('card-item') || 
+                    entry.target.classList.contains('timeline-card')) {
+                    // Stagger animations for card items
+                    const staggerClass = `fade-in-delay-${(index % 3) + 1}`;
+                    entry.target.classList.remove('fade-in');
+                    entry.target.classList.add(staggerClass);
+                }
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all cards and timeline items
+    document.querySelectorAll('.card-item, .timeline-card, .intro-avatar').forEach(el => {
+        observer.observe(el);
+    });
+}
+
 // ── INIT ──────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
+    initScrollAnimations();
 
     // Set dynamic footer year
     const yearSpan = document.getElementById('year');
