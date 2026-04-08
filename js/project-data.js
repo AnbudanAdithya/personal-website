@@ -270,7 +270,7 @@
             description: 'MBA dissertation testing Piotroski\'s F-Score in India\'s NSE 100 and comparing it against a graduated A-Score extension.',
             heroTag: 'MBA Dissertation',
             heroTitle: 'Beyond Binary: <span class="highlight">Piotroski F-Score</span>',
-            heroSub: 'An MBA dissertation testing whether Piotroski\'s original F-Score outperforms a graduated A-Score framework within India\'s NSE 100 value universe.',
+            heroSub: 'An MBA dissertation testing whether a modified Piotroski\'s F-Score outperforms the original Piotroski\'s F-Score within India\'s NSE 100 value universe.',
             overviewParagraphs: [
                 'This dissertation studies whether Piotroski\'s F-Score can reliably separate financially strong value stocks from weak ones in India\'s NSE 100 universe. It also tests a modified A-Score framework that assigns graduated weights to the original nine signals instead of using a pure binary system.',
                 'The research covers <strong style="color:var(--text-primary)">189 unique NSE 100 companies</strong> across a <strong style="color:var(--text-primary)">12-year sample from July 2013 to June 2025</strong>. Each year, the top 30% of stocks by book-to-market ratio are identified as value stocks, and both models are tested on the same sample.',
