@@ -4,6 +4,56 @@
             "source": "/index.html",
             "destination": "/",
             "permanent": true
+        },
+        {
+            "source": "/HTML/ML-classification.html",
+            "destination": "/HTML/project.html?slug=ml-classification",
+            "permanent": true
+        },
+        {
+            "source": "/HTML/iran-israel-media.html",
+            "destination": "/HTML/project.html?slug=iran-israel-media",
+            "permanent": true
+        },
+        {
+            "source": "/HTML/cybersecurity-threat-dashboard.html",
+            "destination": "/HTML/project.html?slug=cybersecurity-threat-dashboard",
+            "permanent": true
+        },
+        {
+            "source": "/HTML/bike-analytics.html",
+            "destination": "/HTML/project.html?slug=bike-analytics",
+            "permanent": true
+        },
+        {
+            "source": "/HTML/apollo.html",
+            "destination": "/HTML/report.html?slug=apollo",
+            "permanent": true
+        },
+        {
+            "source": "/HTML/tata-motors.html",
+            "destination": "/HTML/report.html?slug=tata-motors",
+            "permanent": true
+        },
+        {
+            "source": "/HTML/BMC.html",
+            "destination": "/HTML/report.html?slug=bmc",
+            "permanent": true
+        },
+        {
+            "source": "/HTML/product-study.html",
+            "destination": "/HTML/report.html?slug=product-study",
+            "permanent": true
+        },
+        {
+            "source": "/HTML/fintech-report.html",
+            "destination": "/HTML/report.html?slug=fintech-report",
+            "permanent": true
+        },
+        {
+            "source": "/HTML/book-review.html",
+            "destination": "/HTML/report.html?slug=book-review",
+            "permanent": true
         }
     ]
 }

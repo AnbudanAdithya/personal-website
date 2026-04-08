@@ -1,149 +1,5 @@
-const projectModels = [
-    {
-        icon: '📊',
-        title: 'Portfolio Optimization Model',
-        description: 'Built using Modern Portfolio Theory to estimate efficient portfolios, risk-return trade-offs, and allocation decisions.',
-        tools: ['Python', 'NumPy'],
-        tags: ['Monte Carlo', 'MPT', 'Efficient Frontier'],
-        status: 'Coming Soon',
-        year: '2026',
-        link: null,
-    },
-    {
-        icon: '💰',
-        title: 'Payback Period Calculator',
-        description: 'Interactive model to calculate simple and discounted payback periods with fixed-growth and uneven cash flow patterns.',
-        tools: ['Excel', 'VBA'],
-        tags: ['DCF', 'Capital Budgeting', 'Calculator'],
-        status: 'Completed',
-        year: '2026',
-        link: 'payback.html',
-    },
-];
-
-const projectResearch = [
-    {
-        icon: '🎵',
-        title: 'Spotify Tracks Popularity Classification',
-        description: 'A machine learning model that classifies Spotify tracks into popularity tiers using audio features and metadata.',
-        tools: ['Python', 'Scikit-learn'],
-        tags: ['Random Forest', 'Data Preprocessing', 'Model Evaluation'],
-        status: 'Completed',
-        year: '2026',
-        link: 'ML-classification.html',
-        category: 'analytics',
-    },
-    {
-        icon: '📝',
-        title: 'Global Media Framing Analysis - Iran Israel War',
-        description: 'Cross-layer analysis of global sentiment across media channels, editorial opinions, and public opinion on the Iran-Israel war.',
-        tools: ['Python', 'Google Cloud API'],
-        tags: ['Topic Modelling', 'Sentiment Analysis', 'NLP'],
-        status: 'Completed',
-        year: '2026',
-        link: 'iran-israel-media.html',
-        category: 'analytics',
-    },
-    {
-        icon: '🌐',
-        title: 'Global Cybersecurity Threat Dashboard',
-        description: 'Interactive Power BI dashboard analyzing and visualizing global cybersecurity threats across countries and industries.',
-        tools: ['Power BI'],
-        tags: ['Power BI', 'Risk Analytics', 'Data Visualization'],
-        status: 'Completed',
-        year: '2026',
-        link: 'cybersecurity-threat-dashboard.html',
-        category: 'analytics',
-    },
-    {
-        icon: '📚',
-        title: 'MBA Dissertation - Piotroski F-Score',
-        description: 'An exploratory quantitative study on Piotroski F-Score and a proposed modification aimed at improving investor returns.',
-        tools: ['Excel', 'Capitaline'],
-        tags: ['Financial Analysis', 'Valuation Research'],
-        status: 'Coming Soon',
-        year: '2026',
-        link: null,
-        category: 'equity',
-    },
-    {
-        icon: '📈',
-        title: 'Business Analytics Dashboard',
-        description: 'An interactive business analytics dashboard built with R and Power BI to identify the drivers of bike purchase decisions.',
-        tools: ['R', 'Power BI'],
-        tags: ['Logistic Regression', 'Data Analytics'],
-        status: 'Completed',
-        year: '2025',
-        link: 'bike-analytics.html',
-        category: 'analytics',
-    },
-    {
-        icon: '🩺',
-        title: 'Apollo Hospitals Equity Research',
-        description: 'A fundamental analysis report covering industry positioning, financial ratios, valuation, and an investment recommendation.',
-        tools: [],
-        tags: ['Equity Research', 'Fundamental Analysis', 'Valuation'],
-        status: 'Completed',
-        year: '2025',
-        link: 'apollo.html',
-        category: 'equity',
-    },
-    {
-        icon: '🚗',
-        title: 'Tata Motors Financial Analysis',
-        description: 'A comprehensive evaluation of Tata Motors through financial statements, cash flow trends, and ratio analysis.',
-        tools: [],
-        tags: ['Financial Analysis', 'Ratio Analysis', 'Corporate Finance'],
-        status: 'Completed',
-        year: '2024',
-        link: 'tata-motors.html',
-        category: 'equity',
-    },
-    {
-        icon: '🏥',
-        title: 'Pfizer: Value Chain & BMC',
-        description: 'A strategic analysis of Pfizer using Porter\'s Value Chain Analysis and the Business Model Canvas framework.',
-        tools: [],
-        tags: ['Business Model Canvas', 'Value Chain Analysis'],
-        status: 'Completed',
-        year: '2025',
-        link: 'BMC.html',
-        category: 'strategy',
-    },
-    {
-        icon: '🎯',
-        title: 'Product Idea Market Study',
-        description: 'An in-depth market research study evaluating feasibility, target demographics, and the competitive landscape for a new concept.',
-        tools: [],
-        tags: ['Market Research', 'Business Strategy', 'Consumer Behavior'],
-        status: 'Completed',
-        year: '2024',
-        link: 'product-study.html',
-        category: 'strategy',
-    },
-    {
-        icon: '📱',
-        title: 'FinTech Banks Report',
-        description: 'A research report analysing the rise of FinTech banks, their operating models, and their disruption of traditional banking.',
-        tools: [],
-        tags: ['Market Research', 'FinTech', 'Business Strategy'],
-        status: 'Completed',
-        year: '2023',
-        link: 'fintech-report.html',
-        category: 'strategy',
-    },
-    {
-        icon: '📖',
-        title: 'Book Review',
-        description: 'A critical review of The Psychology of Money exploring foundational principles of personal finance and behavioural investing.',
-        tools: [],
-        tags: ['Personal Finance', 'Behavioral Investing', 'Book Analysis'],
-        status: 'Completed',
-        year: '2023',
-        link: 'book-review.html',
-        category: 'strategy',
-    },
-];
+const projectModels = window.projectModels || [];
+const projectResearch = window.projectResearch || [];
 
 function injectProjectsShell() {
     if (document.getElementById('navbar')) return;
@@ -178,7 +34,7 @@ function injectProjectsShell() {
     if (!document.querySelector('footer')) {
         const footerMarkup = `
             <footer>
-                <p>Copyright &copy; <span id="year"></span> SA | Built with 💛 by Adithya</p>
+                <p>Copyright &copy; <span id="year"></span> SA | Built with &#128155; by Adithya</p>
             </footer>
         `;
         const scrollButton = document.getElementById('scroll-top');
@@ -198,10 +54,10 @@ function buildProjectCard(project, buttonLabel) {
             : 'coming-soon';
 
     const statusIcon = project.status === 'Completed'
-        ? '✓'
+        ? '&#10003;'
         : project.status === 'In Progress'
-            ? '↻'
-            : '⌛';
+            ? '&#8635;'
+            : '&#8987;';
 
     const tagMarkup = project.tags.map((tag) => `<span class="tag">${tag}</span>`).join('');
     const cardClass = project.link ? 'project-card' : 'project-card project-card-disabled';
