@@ -2,15 +2,17 @@
 function initNavbar() {
     const navbar = document.getElementById('navbar');
     if (!navbar) return;
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.4)';
-            navbar.style.background = 'rgba(10, 10, 15, 0.95)';
-        } else {
-            navbar.style.boxShadow = 'none';
-            navbar.style.background = 'rgba(10, 10, 15, 0.85)';
-        }
-    });
+    let isScrolled = false;
+
+    const syncNavbarState = () => {
+        const nextScrolled = window.scrollY > 50;
+        if (nextScrolled === isScrolled) return;
+        isScrolled = nextScrolled;
+        navbar.classList.toggle('is-scrolled', isScrolled);
+    };
+
+    syncNavbarState();
+    window.addEventListener('scroll', syncNavbarState, { passive: true });
 }
 
 // ── TYPEWRITER EFFECT ─────────────────────────────────────────
@@ -82,7 +84,6 @@ function initScrollAnimations() {
 // ── INIT ──────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
-    initScrollAnimations();
 
     // Set dynamic footer year
     const yearSpan = document.getElementById('year');
@@ -120,9 +121,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── SCROLL TO TOP ─────────────────────────────────────────
     const scrollBtn = document.getElementById('scroll-top');
     if (scrollBtn) {
-        window.addEventListener('scroll', () => {
-            scrollBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
-        });
+        const syncScrollButton = () => {
+            scrollBtn.classList.toggle('is-visible', window.scrollY > 300);
+        };
+        syncScrollButton();
+        window.addEventListener('scroll', syncScrollButton, { passive: true });
         scrollBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
@@ -316,10 +319,14 @@ function initScrollProgress() {
     bar.id = 'scroll-progress'
     document.body.prepend(bar)
 
-    window.addEventListener('scroll', () => {
+    const updateProgress = () => {
         const total = document.documentElement.scrollHeight - window.innerHeight
-        bar.style.width = (total > 0 ? (window.scrollY / total) * 100 : 0) + '%'
-    }, { passive: true })
+        const ratio = total > 0 ? Math.min(1, Math.max(0, window.scrollY / total)) : 0
+        bar.style.transform = `scaleX(${ratio})`
+    }
+
+    updateProgress()
+    window.addEventListener('scroll', updateProgress, { passive: true })
 }
 
 

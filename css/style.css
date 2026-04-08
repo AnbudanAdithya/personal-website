@@ -49,13 +49,18 @@ body {
     top: 0; left: 0; right: 0;
     z-index: 1000;
     background: rgba(10, 10, 15, 0.85);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
     padding: 0 2rem;
     height: 70px;
     display: flex;
     align-items: center;
     transition: var(--transition);
+}
+
+#navbar.is-scrolled {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+    background: rgba(10, 10, 15, 0.95);
 }
 
 .nav-container {
@@ -593,14 +598,23 @@ audio::-webkit-media-controls-time-remaining-display {
     width: 44px; height: 44px;
     font-size: 1.2rem;
     cursor: pointer;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 15px rgba(240,192,64,0.3);
-    transition: var(--transition);
+    transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease;
     z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
 }
 #scroll-top:hover { background: var(--accent-hover); }
+
+#scroll-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 
 /* ── FOCUS STYLES ────────────────────────────────────────── */
 a:focus-visible, button:focus-visible {
@@ -886,27 +900,21 @@ a:focus-visible, button:focus-visible {
     position: fixed;
     top: 0; left: 0;
     height: 2.5px;
-    width: 0%;
+    width: 100%;
     background: linear-gradient(90deg, var(--accent), #fff8c0, var(--accent));
     z-index: 9999;
     pointer-events: none;
-    box-shadow: 0 0 8px rgba(240, 192, 64, 0.6);
-    transition: width 0.06s linear;
+    box-shadow: 0 0 6px rgba(240, 192, 64, 0.45);
+    transform-origin: left center;
+    transform: scaleX(0);
+    will-change: transform;
 }
 
 
 /* ── 5. GRAIN TEXTURE ─────────────────────────────────────────
    Subtle film grain over the entire page — no JS needed        */
 body::after {
-    content: '';
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 9990;
-    opacity: 0.028;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-    background-size: 180px 180px;
-    mix-blend-mode: overlay;
+    display: none;
 }
 
 
@@ -914,35 +922,37 @@ body::after {
    Elements start invisible; JS adds .revealed when in view     */
 .reveal {
     opacity: 0;
-    transform: translateY(32px);
+    transform: translateY(18px);
     transition:
-        opacity   0.65s cubic-bezier(0.22, 1, 0.36, 1),
-        transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+        opacity   0.32s ease-out,
+        transform 0.32s ease-out;
+    will-change: opacity, transform;
 }
 
-.reveal.from-left  { transform: translateX(-36px); }
-.reveal.from-right { transform: translateX(36px); }
+.reveal.from-left  { transform: translateX(-20px); }
+.reveal.from-right { transform: translateX(20px); }
 .reveal.revealed   { opacity: 1; transform: translate(0, 0); }
 
 /* Stagger grid children */
 .reveal-stagger > * {
     opacity: 0;
-    transform: translateY(26px);
+    transform: translateY(16px);
     transition:
-        opacity   0.55s cubic-bezier(0.22, 1, 0.36, 1),
-        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+        opacity   0.28s ease-out,
+        transform 0.28s ease-out;
+    will-change: opacity, transform;
 }
 
 .reveal-stagger.revealed > *:nth-child(1)  { transition-delay: 0.00s; }
-.reveal-stagger.revealed > *:nth-child(2)  { transition-delay: 0.07s; }
-.reveal-stagger.revealed > *:nth-child(3)  { transition-delay: 0.14s; }
-.reveal-stagger.revealed > *:nth-child(4)  { transition-delay: 0.21s; }
-.reveal-stagger.revealed > *:nth-child(5)  { transition-delay: 0.28s; }
-.reveal-stagger.revealed > *:nth-child(6)  { transition-delay: 0.35s; }
-.reveal-stagger.revealed > *:nth-child(7)  { transition-delay: 0.42s; }
-.reveal-stagger.revealed > *:nth-child(8)  { transition-delay: 0.49s; }
-.reveal-stagger.revealed > *:nth-child(9)  { transition-delay: 0.56s; }
-.reveal-stagger.revealed > *:nth-child(10) { transition-delay: 0.63s; }
+.reveal-stagger.revealed > *:nth-child(2)  { transition-delay: 0.03s; }
+.reveal-stagger.revealed > *:nth-child(3)  { transition-delay: 0.06s; }
+.reveal-stagger.revealed > *:nth-child(4)  { transition-delay: 0.09s; }
+.reveal-stagger.revealed > *:nth-child(5)  { transition-delay: 0.12s; }
+.reveal-stagger.revealed > *:nth-child(6)  { transition-delay: 0.15s; }
+.reveal-stagger.revealed > *:nth-child(7)  { transition-delay: 0.18s; }
+.reveal-stagger.revealed > *:nth-child(8)  { transition-delay: 0.21s; }
+.reveal-stagger.revealed > *:nth-child(9)  { transition-delay: 0.24s; }
+.reveal-stagger.revealed > *:nth-child(10) { transition-delay: 0.27s; }
 
 .reveal-stagger.revealed > * { opacity: 1; transform: translateY(0); }
 
@@ -962,17 +972,17 @@ body::after {
 
 .fx-load {
     opacity: 0;
-    animation: fx-rise 0.72s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: fx-rise 0.42s ease-out forwards;
 }
 
 .fx-load-pop {
     opacity: 0;
-    animation: fx-pop 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: fx-pop 0.38s ease-out forwards;
 }
 
-.fx-d1 { animation-delay: 0.08s; }
-.fx-d2 { animation-delay: 0.20s; }
-.fx-d3 { animation-delay: 0.32s; }
-.fx-d4 { animation-delay: 0.44s; }
-.fx-d5 { animation-delay: 0.56s; }
-.fx-d6 { animation-delay: 0.68s; }
+.fx-d1 { animation-delay: 0.04s; }
+.fx-d2 { animation-delay: 0.10s; }
+.fx-d3 { animation-delay: 0.16s; }
+.fx-d4 { animation-delay: 0.22s; }
+.fx-d5 { animation-delay: 0.28s; }
+.fx-d6 { animation-delay: 0.34s; }
