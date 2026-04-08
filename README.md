@@ -17,7 +17,7 @@ Welcome to the source code for my **personal website and integrated project port
 * **Responsive Design:** Layout adapts across desktop, tablet, and mobile devices using Flexbox and Grid.
 * **Consistent Visual System:** Shared navigation, typography, styling, and interactions across all sections of the website.
 * **Interactive UI Effects:** Typewriter hero effect, reveal animations, scroll progress bar, and custom cursor interactions.
-* **SEO & Analytics:** SEO metadata is intentionally kept only on the main pages, while project detail pages stay lightweight. Google Analytics remains enabled site-wide.
+* **SEO & Tag Management:** SEO metadata is intentionally kept only on the main pages, while project detail pages stay lightweight. Google Tag Manager is enabled site-wide.
 
 ## 📄 Main Pages
 
@@ -62,7 +62,7 @@ Built with lightweight web technologies, with no framework and no build tools re
 | Icons | Font Awesome, Devicon |
 | Fonts | Google Fonts |
 | Hosting | Vercel |
-| Analytics | Google Analytics |
+| Analytics | Google Tag Manager |
 
 ## 📁 Repository Structure
 
@@ -97,7 +97,6 @@ Built with lightweight web technologies, with no framework and no build tools re
 │   └── 📂 Projects/
 │
 └── 📂 js/
-    ├── 📄 gtag-config.js
     ├── 📄 main.js
     ├── 📄 project-data.js
     ├── 📄 project-detail.js
