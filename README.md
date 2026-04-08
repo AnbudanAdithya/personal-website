@@ -1,45 +1,55 @@
-# :globe_with_meridians: S Adithya | Personal Website
+# 🌐 S Adithya | Personal Website
 
 Welcome to the source code for my **personal website and integrated project portfolio**. This repository now contains my full website in one place, covering my personal profile, resume, blogs, hobbies, financial models, research work, and analytics projects.
 
-:link: **Live Website:** [https://adithya05.vercel.app/](https://adithya05.vercel.app/)
+🌍 **Live Website:** [https://adithya05.vercel.app/](https://adithya05.vercel.app/)
 
-**Note:** This is now a unified repository. The earlier separate projects website has been merged into this main website, so everything lives under one deployment and one codebase.
+**Note:** *This is now a unified repository. The earlier separate projects website has been merged into this main website, so everything lives under one deployment and one codebase.*
 
-## :sparkles: Features
+## 🌟 Features
 
-- **Unified Portfolio Website:** Personal pages and project portfolio are integrated into a single static website.
-- **Dedicated Internal Projects Page:** The `Projects` navbar link opens an internal page instead of redirecting to a separate site.
-- **Dynamic Project Rendering:** Project cards and project details are driven from shared data in `js/project-data.js`.
-- **Reusable Detail Templates:** Narrative project pages and PDF-based report pages use shared templates instead of separate HTML files for every project.
-- **Interactive Financial Model:** Includes a working Payback Period Calculator with chart support.
-- **Embedded Research Reports:** Report pages display PDFs directly inside the website using embedded viewers.
-- **Responsive Design:** Layout adapts across desktop, tablet, and mobile devices using Flexbox and Grid.
-- **Consistent Visual System:** Shared navigation, typography, styling, and interactions across all sections of the website.
-- **Interactive UI Effects:** Typewriter hero effect, reveal animations, scroll progress bar, and custom cursor interactions.
-- **SEO & Analytics:** Canonical tags, sitemap, robots file, Open Graph metadata, and Google Analytics configuration.
+* **Unified Portfolio Website:** Personal pages and project portfolio are integrated into a single static website.
+* **Dedicated Internal Projects Page:** The `Projects` navbar link opens an internal page instead of redirecting to a separate site.
+* **Dynamic Project Rendering:** Project cards and project details are driven from shared data in `js/project-data.js`.
+* **Reusable Detail Templates:** Narrative project pages and PDF-based report pages use shared templates instead of separate HTML files for every project.
+* **Interactive Financial Model:** Includes a working Payback Period Calculator with chart support.
+* **Embedded Research Reports:** Report pages display PDFs directly inside the website using embedded viewers.
+* **Responsive Design:** Layout adapts across desktop, tablet, and mobile devices using Flexbox and Grid.
+* **Consistent Visual System:** Shared navigation, typography, styling, and interactions across all sections of the website.
+* **Interactive UI Effects:** Typewriter hero effect, reveal animations, scroll progress bar, and custom cursor interactions.
+* **SEO & Analytics:** SEO metadata is intentionally kept only on the main pages, while project detail pages stay lightweight. Google Analytics remains enabled site-wide.
 
-## :page_facing_up: Main Pages
+## 📄 Main Pages
 
-- `index.html` - **Home:** Introduction, profile, skills, and social links
-- `HTML/resume.html` - **Resume:** Professional experience, education, and CV download
-- `HTML/blogs.html` - **Blogs:** Blog cards linking to published articles
-- `HTML/hobby.html` - **Hobby:** Personal interests and music section
-- `HTML/projects.html` - **Projects:** Financial models, research, analytics, and strategy projects
+The website currently includes the following main pages:
 
-## :bar_chart: Project Pages
+* `index.html` - **Home:** Introduction, profile, skills, and social links
+* `HTML/resume.html` - **Resume:** Professional experience, education, and CV download
+* `HTML/blogs.html` - **Blogs:** Blog cards linking to published articles
+* `HTML/hobby.html` - **Hobby:** Personal interests and music section
+* `HTML/projects.html` - **Projects:** Financial models, research, analytics, and strategy projects
+
+## 📊 Project Pages
 
 The integrated Projects section now uses a simplified internal structure:
 
-- `HTML/payback.html` - standalone interactive calculator
-- `HTML/project.html?slug=...` - shared template for narrative and analytics project pages
-- `HTML/report.html?slug=...` - shared template for PDF-based report pages
+* `HTML/payback.html` - standalone interactive calculator
+* `HTML/project.html?slug=...` - shared template for narrative and analytics project pages
+* `HTML/report.html?slug=...` - shared template for PDF-based report pages
 
-:file_folder: Supporting PDFs used in report pages are stored in `assets/PDF/`.
+📁 Supporting PDFs used in report pages are stored in `assets/PDF/`.
 
-:twisted_rightwards_arrows: Legacy project URLs are redirected through `vercel.json` so older links still resolve.
+🔁 Legacy project URLs are redirected through `vercel.json` so older links still resolve.
 
-## :hammer_and_wrench: Tech Stack
+🔎 SEO metadata is intentionally maintained only for:
+
+* `index.html`
+* `HTML/projects.html`
+* `HTML/blogs.html`
+* `HTML/resume.html`
+* `HTML/hobby.html`
+
+## 🛠️ Tech Stack
 
 Built with lightweight web technologies, with no framework and no build tools required.
 
@@ -54,48 +64,48 @@ Built with lightweight web technologies, with no framework and no build tools re
 | Hosting | Vercel |
 | Analytics | Google Analytics |
 
-## :file_folder: Repository Structure
+## 📁 Repository Structure
 
 ```text
-personal-website/
-|-- index.html
-|-- README.md
-|-- robots.txt
-|-- sitemap.xml
-|-- vercel.json
-|
-|-- assets/
-|   |-- Hobby/
-|   `-- PDF/
-|
-|-- css/
-|   |-- style.css
-|   `-- projects.css
-|
-|-- HTML/
-|   |-- resume.html
-|   |-- blogs.html
-|   |-- hobby.html
-|   |-- projects.html
-|   |-- project.html
-|   |-- report.html
-|   `-- payback.html
-|
-|-- images/
-|   |-- Blogs/
-|   |-- Hobby/
-|   `-- Projects/
-|
-`-- js/
-    |-- gtag-config.js
-    |-- main.js
-    |-- project-data.js
-    |-- project-detail.js
-    |-- projects.js
-    `-- payback.js
+📂 personal-website/
+├── 📄 index.html
+├── 📄 README.md
+├── 📄 robots.txt
+├── 📄 sitemap.xml
+├── 📄 vercel.json
+│
+├── 📂 assets/
+│   ├── 📂 Hobby/
+│   └── 📂 PDF/
+│
+├── 📂 css/
+│   ├── 📄 style.css
+│   └── 📄 projects.css
+│
+├── 📂 HTML/
+│   ├── 📄 resume.html
+│   ├── 📄 blogs.html
+│   ├── 📄 hobby.html
+│   ├── 📄 projects.html
+│   ├── 📄 project.html
+│   ├── 📄 report.html
+│   └── 📄 payback.html
+│
+├── 📂 images/
+│   ├── 📂 Blogs/
+│   ├── 📂 Hobby/
+│   └── 📂 Projects/
+│
+└── 📂 js/
+    ├── 📄 gtag-config.js
+    ├── 📄 main.js
+    ├── 📄 project-data.js
+    ├── 📄 project-detail.js
+    ├── 📄 projects.js
+    └── 📄 payback.js
 ```
 
-## :heavy_plus_sign: Adding A New Project
+## ➕ Adding A New Project
 
 Open `js/project-data.js` and add the new project in the shared data source.
 
@@ -103,7 +113,7 @@ Open `js/project-data.js` and add the new project in the shared data source.
 {
     template: 'project',
     card: {
-        icon: '&#128200;',
+        icon: '📈',
         title: 'My New Project',
         description: 'Short description here.',
         tools: ['Python'],
@@ -112,8 +122,9 @@ Open `js/project-data.js` and add the new project in the shared data source.
         year: '2026',
         category: 'analytics'
     },
-    seoTitle: 'My New Project | S Adithya',
-    description: 'Short SEO description here.'
+    heroTag: 'Data Analytics',
+    heroTitle: 'My New <span class="highlight">Project</span>',
+    heroSub: 'Short hero text here.'
 }
 ```
 
@@ -123,10 +134,11 @@ For most additions:
 2. Use `template: 'project'` for narrative pages or `template: 'report'` for PDF pages
 3. Add any required PDFs to `assets/PDF/`
 4. Only create a separate HTML page when the project needs custom interactive logic, like `payback.html`
+5. If it belongs inside the filtered research section, use `category: 'analytics'`, `category: 'equity'`, or `category: 'strategy'`
 
 The card will then render automatically on the Projects page.
 
-## :rocket: Running Locally
+## 🚀 Running Locally
 
 No installation is required.
 
@@ -140,26 +152,27 @@ git clone https://github.com/AnbudanAdithya/personal-website.git
 
 3. Run it using one of these options:
 
-- Open `index.html` directly in your browser
-- Use VS Code **Live Server** for easier local previewing
+* Open `index.html` directly in your browser
+* Use VS Code **Live Server** for easier local previewing
 
-## :memo: Notes
+## 📝 Notes
 
-- `css/style.css` contains shared styling for the main website
-- `css/projects.css` contains styling specific to the Projects page and both shared project templates
-- `js/main.js` handles shared interactions and effects
-- `js/project-data.js` stores project listing and detail content
-- `js/project-detail.js` renders the shared detail templates
-- `js/projects.js` handles the project navigation shell and project card rendering
-- `js/payback.js` is only used by the Payback Period Calculator page
+* `css/style.css` contains shared styling for the main website
+* `css/projects.css` contains styling specific to the Projects page and both shared project templates
+* `js/main.js` handles shared interactions and effects
+* `js/project-data.js` stores project listing and detail content
+* `js/project-detail.js` renders the shared detail templates
+* `js/projects.js` handles the project navigation shell and project card rendering
+* `js/payback.js` is only used by the Payback Period Calculator page
+* `sitemap.xml` now lists only the main SEO-targeted pages
 
-## :speech_balloon: Let's Connect
+## 📬 Let's Connect
 
-- **LinkedIn:** [S Adithya](https://www.linkedin.com/in/s-adithya-918009294/)
-- **GitHub:** [@AnbudanAdithya](https://github.com/AnbudanAdithya)
-- **Substack:** [Adithya's Musings](https://substack.com/@adithya05)
-- **Email:** `adithyas0503@gmail.com`
+* **LinkedIn:** [S Adithya](https://www.linkedin.com/in/s-adithya-918009294/)
+* **GitHub:** [@AnbudanAdithya](https://github.com/AnbudanAdithya)
+* **Substack:** [Adithya's Musings](https://substack.com/@adithya05)
+* **Email:** `adithyas0503@gmail.com`
 
 ---
 
-*Built with :yellow_heart: by Adithya*
+*Built with 💛 by Adithya*
