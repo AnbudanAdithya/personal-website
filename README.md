@@ -4,7 +4,7 @@ Welcome to the source code for my **personal website and integrated project port
 
 🌍 **Live Website:** [https://adithya05.vercel.app/](https://adithya05.vercel.app/)
 
-**Note:** *This is now a unified repository. The earlier separate projects website has been merged into this main website, so everything lives under one deployment and one codebase.*
+**Note:** *The HTML, CSS, and JavaScript code in this repository is licensed under the MIT License. All written content, blog posts, images, and attached PDF reports are copyrighted by S Adithya and may not be reused without permission.*
 
 ## 🌟 Features
 
