@@ -1,64 +1,160 @@
-# S Adithya | Personal Portfolio Website
+# 🌐 S Adithya | Personal Website
 
-Welcome to the repository for my personal portfolio website! This site serves as a central hub for my professional experience, academic background in Finance and Analytics, market research studies, blogs, and creative hobbies. 
+Welcome to the source code for my **personal website and integrated project portfolio**. This repository now contains my full website in one place, covering my personal profile, resume, blogs, hobbies, financial models, research work, and analytics projects.
 
-You can view the live website here: [[Website](https://adithya05.vercel.app/)]
+🌍 **Live Website:** [https://adithya05.vercel.app/](https://adithya05.vercel.app/)
+
+**Note:** *This is now a unified repository. The earlier separate projects website has been merged into this main website, so everything lives under one deployment and one codebase.*
 
 ## 🌟 Features
 
-* **Modern Dark Theme:** A sleek, dark-themed UI with a signature golden accent, designed for high readability and a premium feel.
-* **Dynamic Typing Effect:** A custom JavaScript typewriter effect on the hero section highlighting my core competencies.
-* **Responsive Design:** Fully mobile-responsive layout using CSS Grid and Flexbox, ensuring a seamless experience across desktop, tablet, and mobile devices.
-* **Portfolio Gateways:** A dedicated project hub that branches out into specialized domains (Finance & Analytics, Market Studies & Research).
-* **Interactive Modals:** A custom-built pop-up modal system for the Hobbies section, featuring a sleek, WebKit-styled audio player for my original music composition.
-* **Smooth Navigation:** A glassmorphism sticky navbar with scroll-detection styling.
+* **Unified Portfolio Website:** Personal pages and project portfolio are integrated into a single static website.
+* **Dedicated Internal Projects Page:** The `Projects` navbar link now opens an internal page instead of redirecting to a separate site.
+* **Dynamic Project Rendering:** Project cards on the Projects page are rendered from JavaScript data in `js/projects.js`.
+* **Interactive Financial Model:** Includes a working Payback Period Calculator with chart support.
+* **Embedded Research Reports:** Project detail pages can display PDFs directly inside the website using embedded viewers.
+* **Responsive Design:** Layout adapts across desktop, tablet, and mobile devices using Flexbox and Grid.
+* **Consistent Visual System:** Shared navigation, typography, styling, and interactions across all sections of the website.
+* **Interactive UI Effects:** Typewriter hero effect, reveal animations, scroll progress bar, and custom cursor interactions.
+* **SEO & Analytics:** Canonical tags, sitemap, robots file, Open Graph metadata, and Google Analytics configuration.
 
-## 📂 Site Structure
+## 📄 Main Pages
 
-The website is composed of several dedicated pages to keep content organized and easily accessible:
+The website currently includes the following main pages:
 
-* `index.html` - **Home:** Introduction, core skills grid, and quick links to my professional socials.
-* `resume.html` - **Resume:** An interactive timeline of my professional experience and education, along with a downloadable CV.
-* `blogs.html` - **Blogs:** A collection of my recent musings and articles (linked to Substack).
-* `hobby.html` - **Hobbies:** A showcase of my creative downtime, featuring an interactive music player for my DJ/BandLab compositions.
+* `index.html` - **Home:** Introduction, profile, skills, and social links
+* `HTML/resume.html` - **Resume:** Professional experience, education, and CV download
+* `HTML/blogs.html` - **Blogs:** Blog cards linking to published articles
+* `HTML/hobby.html` - **Hobby:** Personal interests and music section
+* `HTML/projects.html` - **Projects:** Financial models, research, analytics, and strategy projects
+
+## 📊 Project Pages
+
+The integrated Projects section links to internal detail pages under `HTML/`:
+
+* `HTML/payback.html` - Payback Period Calculator
+* `HTML/ML-classification.html` - Spotify Popularity Classification
+* `HTML/iran-israel-media.html` - Iran-Israel Media Framing Analysis
+* `HTML/cybersecurity-threat-dashboard.html` - Global Cybersecurity Threat Dashboard
+* `HTML/bike-analytics.html` - Bike Sales Analytics Dashboard
+* `HTML/apollo.html` - Apollo Hospitals Fundamental Analysis
+* `HTML/tata-motors.html` - Tata Motors Financial Analysis
+* `HTML/BMC.html` - Pfizer Value Chain & BMC
+* `HTML/product-study.html` - Product Idea Market Study
+* `HTML/fintech-report.html` - FinTech Banks Sector Study
+* `HTML/book-review.html` - Critical Book Review
+
+📁 Supporting PDFs used in report pages are stored in `assets/PDF/`.
 
 ## 🛠️ Tech Stack
 
-This project is built using vanilla web technologies, keeping it lightweight, fast, and dependency-free:
+Built with lightweight web technologies, with no framework and no build tools required.
 
-* **HTML5:** Semantic structuring and accessible layout.
-* **CSS3:** Custom variables (`:root`), animations, glassmorphism UI, and hardware-accelerated scroll behaviors.
-* **JavaScript (ES6):** DOM manipulation, modal handling, audio playback control, and typing animations.
-* **Icons & Typography:** Google Fonts (*Inter*), Font Awesome 6, and DevIcons.
+| Layer | Technology |
+|---|---|
+| Markup | HTML5 |
+| Styling | CSS3 |
+| Scripting | Vanilla JavaScript (ES6) |
+| Charts | Chart.js |
+| Icons | Font Awesome, Devicon |
+| Fonts | Google Fonts |
+| Hosting | Vercel |
+| Analytics | Google Analytics |
+
+## 📁 Repository Structure
+
+```text
+📂 personal-website/
+├── 📄 index.html
+├── 📄 README.md
+├── 📄 robots.txt
+├── 📄 sitemap.xml
+├── 📄 vercel.json
+│
+├── 📂 assets/
+│   ├── 📂 Hobby/
+│   └── 📂 PDF/
+│
+├── 📂 css/
+│   ├── 📄 style.css
+│   └── 📄 projects.css
+│
+├── 📂 HTML/
+│   ├── 📄 resume.html
+│   ├── 📄 blogs.html
+│   ├── 📄 hobby.html
+│   ├── 📄 projects.html
+│   └── 📄 project detail pages
+│
+├── 📂 images/
+│   ├── 📂 Blogs/
+│   ├── 📂 Hobby/
+│   └── 📂 Projects/
+│
+└── 📂 js/
+    ├── 📄 gtag-config.js
+    ├── 📄 main.js
+    ├── 📄 projects.js
+    └── 📄 payback.js
+```
+
+## ➕ Adding a New Project
+
+Open `js/projects.js` and add a new object to either the `projectModels` array or the `projectResearch` array.
+
+```js
+{
+    icon: '📊',
+    title: 'My New Project',
+    description: 'Short description here.',
+    tools: ['Python'],
+    tags: ['Analytics'],
+    status: 'Completed',
+    year: '2026',
+    link: 'new-project.html',
+    category: 'analytics'
+}
+```
+
+If the project has a dedicated detail page:
+
+1. Create the corresponding HTML file inside `HTML/`
+2. Add any required PDFs to `assets/PDF/`
+3. Link the project entry to that page
+
+The card will then render automatically on the Projects page.
 
 ## 🚀 Running Locally
 
-To run this project locally, you don't need any complex build tools or package managers. 
+No installation is required.
 
-1. Clone the repository:   
+1. Clone the repository:
+
 ```bash
-git clone [https://github.com/AnbudanAdithya/Website.git](https://github.com/AnbudanAdithya/Website.git)
+git clone https://github.com/AnbudanAdithya/personal-website.git
 ```
 
-2. Navigate to the project folder.
-3. Simply open `index.html` in your preferred web browser, or use an extension like VS Code's **Live Server** for hot-reloading.
+2. Open the project folder.
 
-## 🔮 Future Roadmap
+3. Run it using one of these options:
 
-This website is a living digital ecosystem. Future updates will include:
+* Open `index.html` directly in your browser
+* Use VS Code **Live Server** for easier local previewing
 
-* Additional audio tracks and hobby categories.
-* Expanded blog integrations and new financial models.
-* Continuous UI/UX refinements.
+## 📝 Notes
 
-## 📫 Let's Connect
+* `css/style.css` contains shared styling for the main website
+* `css/projects.css` contains styling specific to the Projects page and project detail pages
+* `js/main.js` handles shared interactions and effects
+* `js/projects.js` handles project navigation shell and project card rendering
+* `js/payback.js` is only used by the Payback Period Calculator page
 
-I am always open to collaborations, discussions on corporate financial strategy, or just a friendly chat!
+## 📬 Let's Connect
 
 * **LinkedIn:** [S Adithya](https://www.linkedin.com/in/s-adithya-918009294/)
 * **GitHub:** [@AnbudanAdithya](https://github.com/AnbudanAdithya)
-* **Substack:** [Adithya's Musings](https://www.google.com/search?q=https://adithya05.substack.com/)
-* **Email:** adithyas0503@gmail.com
+* **Substack:** [Adithya's Musings](https://substack.com/@adithya05)
+* **Email:** `adithyas0503@gmail.com`
 
 ---
 
