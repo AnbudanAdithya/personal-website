@@ -66,7 +66,7 @@
                 {
                     variant: 'kaggle',
                     label: 'View on Kaggle',
-                    href: 'https://www.kaggle.com/datasets/anbudanadithya/spotify-music',
+                    href: 'https://www.kaggle.com/datasets/anbudanadithya05/spotify-music',
                 },
             ],
         },
@@ -250,7 +250,7 @@
                 {
                     variant: 'kaggle',
                     label: 'View on Kaggle',
-                    href: 'https://www.kaggle.com/datasets/anbudanadithya/bike-sales-dataset-1k-rows',
+                    href: 'https://www.kaggle.com/datasets/anbudanadithya05/bike-sales',
                 },
             ],
         },
