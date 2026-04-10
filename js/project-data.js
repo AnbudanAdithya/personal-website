@@ -336,7 +336,7 @@
             heroSub: 'Stripping visual complexity to deliver 99% lighter, signal-pure data streams for Large Language Models.',
             overviewParagraphs: [
                 'Academic journals and corporate reports often contain heavy visual formatting—sidebars, background vectors, and professional fonts—that create "noise" for LLM parsers and increase token consumption.',
-                'The **AI PDF Content Extractor** solves this by performing a precision coordinate-based reconstruction. It maps every character to its original (X, Y) pixel location while replacing complex font data with standard, lightweight system fonts.',
+                'The <span class="highlight">PDF Content Extractor</span> solves this by performing a precision coordinate-based reconstruction. It maps every character to its original (X, Y) pixel location while replacing complex font data with standard, lightweight system fonts.',
                 'The result is a structurally identical PDF that is ~99% smaller in file size (e.g., 8MB reduced to 22KB), ensuring zero text overlap and maximum semantic fidelity for RAG systems and AI summarization.',
             ],
             meta: [
