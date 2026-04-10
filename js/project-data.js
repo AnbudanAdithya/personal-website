@@ -318,6 +318,56 @@
                 },
             ],
         },
+        'pdf-cleaner': {
+            template: 'project',
+            card: {
+                icon: '📑',
+                title: 'PDF Content Extractor',
+                description: 'A precision document tool that optimizes complex academic PDFs for LLM ingestion by stripping graphical noise.',
+                tools: ['Python', 'PyMuPDF (fitz)', 'Coordinate Mapping'],
+                tags: ['Automation', 'NLP', 'Data Normalization'],
+                status: 'Completed',
+                year: '2026',
+                category: 'analytics',
+            },
+            seoTitle: 'PDF Content Extractor | S Adithya',
+            heroTag: 'Document Intelligence',
+            heroTitle: 'Optimizing Data for <span class="highlight">AI Ingestion</span>',
+            heroSub: 'Stripping visual complexity to deliver 99% lighter, signal-pure data streams for Large Language Models.',
+            overviewParagraphs: [
+                'Academic journals and corporate reports often contain heavy visual formatting—sidebars, background vectors, and professional fonts—that create "noise" for LLM parsers and increase token consumption.',
+                'The **AI PDF Content Extractor** solves this by performing a precision coordinate-based reconstruction. It maps every character to its original (X, Y) pixel location while replacing complex font data with standard, lightweight system fonts.',
+                'The result is a structurally identical PDF that is ~99% smaller in file size (e.g., 8MB reduced to 22KB), ensuring zero text overlap and maximum semantic fidelity for RAG systems and AI summarization.',
+            ],
+            meta: [
+                { label: 'Efficiency', value: '99% Size Reduction' },
+                { label: 'Core Engine', value: 'PyMuPDF (fitz)' },
+                { label: 'Optimization', value: 'Coordinate Mapping' },
+                { label: 'Status', value: 'Deployed', tone: 'success' },
+            ],
+            detailTags: ['Python', 'Document AI', 'PDF Processing', 'Data Normalization', 'Automation', 'LLM Optimization'],
+            insightsIcon: '🔬',
+            insightsTitle: 'Technical Optimization Strategy',
+            insights: [
+                {
+                    title: 'Coordinate Fidelity',
+                    body: 'Uses precise <strong style="color: var(--accent);">pixel-origin mapping</strong> to ensure text stays in its original column or sidebar without the overlaps common in standard extraction.',
+                },
+                {
+                    title: 'Metadata Stripping',
+                    body: 'Wipes all <strong style="color: var(--accent);">non-semantic binary data</strong>, including embedded professional fonts and hidden publisher metadata, creating a pure data stream.',
+                },
+                {
+                    title: 'Character Normalization',
+                    body: 'Implements a <strong style="color: var(--accent);">custom replacement layer</strong> for academic typography (ligatures, smart quotes), preventing encoding errors in AI processing.',
+                }
+            ],
+            ctaTitle: 'Source Code &amp; Usage Guide',
+            ctaText: 'The full source code, along with a detailed usage guide, is available on GitHub for anyone looking to optimize their documents for AI applications.',
+            links: [
+                { variant: 'github', label: 'View on Github', href: 'https://github.com/AnbudanAdithya/pdf-text-extractor' },
+            ],
+        },
         'mba-dissertation-f-score': {
             template: 'project',
             card: {
@@ -540,6 +590,7 @@
     ];
 
     const projectResearch = [
+        toResearchCard('pdf-cleaner'),
         toResearchCard('archive-file-renamer'),
         toResearchCard('mba-dissertation-f-score'),
         toResearchCard('ml-classification'),
