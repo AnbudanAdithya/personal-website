@@ -2,6 +2,70 @@
     const detailRoute = (template, slug) => `${template}.html?slug=${slug}`;
 
     const projectDetails = {
+        'archive-file-renamer': {
+            template: 'project',
+            card: {
+                icon: '📁',
+                title: 'Archive File Renamer',
+                description: 'A Python-based GUI utility to transform unorganized media archives into standardized, searchable collections.',
+                tools: ['Python', 'Tkinter'],
+                tags: ['Automation', 'GUI', 'Operational Efficiency'],
+                status: 'Completed',
+                year: '2026',
+                category: 'analytics', // This places it in the "Data Analytics & Modelling" section
+            },
+            seoTitle: 'Archive File Renamer | S Adithya',
+            description: 'Python GUI utility for batch-renaming and standardizing photo archives using two-pass logic, by S Adithya.',
+            heroTag: 'Automation & Productivity',
+            heroTitle: 'From Chaos to <span class="highlight">Order</span>',
+            heroSub: 'Standardizing digital archives through automated, safe, and sequential file renaming.',
+            overviewParagraphs: [
+                'Managing large-scale media archives often involves dealing with cryptic, device-generated filenames like "IMG_001" or "WhatsApp_Image_...", which makes searching for specific assets nearly impossible.',
+                'This project presents a standalone Python application that acts as a digital librarian, instantly standardizing hundreds of files into a clean, sequential series (e.g., Event_001.jpg) in seconds.',
+                'The engine utilizes a <strong style="color:var(--text-primary)">safe two-pass renaming logic</strong>: it first renames files to temporary unique identifiers to clear the naming space, effectively preventing "FileExists" errors and accidental data overwrites.',
+                'Originally designed to streamline hostel multimedia operations, the tool supports standard images, iPhone HEIC formats, and professional DSLR RAW files, maintaining perfect chronological order with 3-digit padding.',
+            ],
+            meta: [
+                { label: 'Project Type', value: 'Automation Tool' },
+                { label: 'Language', value: 'Python 3' },
+                { label: 'GUI Library', value: 'Tkinter' },
+                { label: 'Logic', value: 'Two-Pass Sequential' },
+                { label: 'Packaging', value: 'PyInstaller (.exe)' },
+                { label: 'Year', value: '2026' },
+                { label: 'Status', value: 'Completed', tone: 'success' },
+            ],
+            detailTags: ['Python', 'Automation', 'Desktop App', 'Archival Management', 'Productivity', 'UX Design'],
+            insightsIcon: '⚙️',
+            insightsTitle: 'Technical Features & Workflow',
+            insights: [
+                {
+                    title: 'Namespace Safety',
+                    body: 'Implementation of a <strong style="color: var(--accent);">two-pass rename</strong> ensures that if a file already matches the target pattern, it is temporarily moved rather than causing a system conflict.',
+                },
+                {
+                    title: 'Broad Format Support',
+                    body: 'Built to recognize <strong style="color: var(--accent);">standard (JPG), mobile (HEIC), and professional (RAW)</strong> extensions, ensuring a bulletproof experience for diverse multimedia teams.',
+                },
+                {
+                    title: 'Sequential Archiving',
+                    body: 'Uses <strong style="color: var(--accent);">three-digit padding (001, 002...)</strong> to ensure that over 100+ files stay in perfect alphabetical and numerical order within system explorers.',
+                },
+                {
+                    title: 'Zero-Install Deployment',
+                    body: 'Packaged as a <strong style="color: var(--accent);">standalone executable</strong> via PyInstaller, allowing non-technical users to run the tool without having a Python environment installed.',
+                },
+            ],
+            ctaTitle: 'Source Code & Executable',
+            ctaText: 'The full source code, building instructions, and the portable Windows executable are available on my GitHub repository.',
+            links: [
+                {
+                    variant: 'github',
+                    label: 'View on GitHub',
+                    href: 'https://github.com/anbudanadithya/archive-files-renamer',
+                },
+            ],
+        },
+
         'ml-classification': {
             template: 'project',
             card: {
@@ -476,6 +540,7 @@
     ];
 
     const projectResearch = [
+        toResearchCard('archive-file-renamer'),
         toResearchCard('mba-dissertation-f-score'),
         toResearchCard('ml-classification'),
         toResearchCard('iran-israel-media'),
