@@ -17,7 +17,7 @@ function injectProjectsShell() {
                     <li><a href="../HTML/blogs.html"><i class="fas fa-blog"></i> Blogs</a></li>
                     <li><a href="../HTML/hobby.html"><i class="fas fa-th-large"></i> Hobby</a></li>
                     <li>
-                        <a href="https://github.com/AnbudanAdithya/personal-website" target="_blank" rel="noopener noreferrer" class="btn-fork" aria-label="GitHub repository">
+                        <a href="https://github.com/AnbudanAdithya" target="_blank" rel="noopener noreferrer" class="btn-fork" aria-label="GitHub repository">
                             <i class="fas fa-code-branch"></i> <i class="fas fa-star"></i>
                         </a>
                     </li>
