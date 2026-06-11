@@ -17,10 +17,10 @@ function initNavbar() {
 
 // ── TYPEWRITER EFFECT ─────────────────────────────────────────
 const textArray = [
-    "MBA Finance Student",
+    "B.Com.(Hons.) from SSSIHL",
+    "MBA from SSSIHL",
     "Ex-Intern at Ashok Leyland",
-    "Aspiring Finance Professional",
-    "Data Analytics Enthusiast"
+    "Driving meaningful change through data and strategy"
 ];
 let textIndex = 0;
 let charIndex = 0;
